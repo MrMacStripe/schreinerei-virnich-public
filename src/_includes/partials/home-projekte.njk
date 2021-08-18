@@ -1,0 +1,87 @@
+<section id="projekte" class="py-20">
+  <header class="px-4 mx-auto">
+    <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Wir stellen vor: Besondere Projekte</h2>
+    <p class="mx-auto mt-2 text-lg text-gray-600 md:text-center max-w-prose">Regelmäßig betreuen wir einzigartige Projekte, auf die wir besonders stolz sind. Dabei handelt es sich manchmal um einen Großauftrag, der besonders viele unserer Leistungen in Anspruch nimmt, oder aber um ein Projekt, das die handwerkliche Begabung unserer Mitarbeiter besonders herausstellt. Wir aktualisieren diese Projekte regelmäßig.</p>
+  </header>
+
+  <div class="px-4 mx-auto mt-16 space-y-16 md:mt-20 md:space-y-20 max-w-default">
+
+    <!-- Container for projects -->
+    
+    {% macro projekte(headline, link, image, description, excerpt, features) %}
+    <article class="flex items-start flex-nowrap md:space-x-8 md:even:flex-row-reverse md:even:space-x-reverse">
+
+      <div class="flex-1">
+
+        <!-- Project Description -->
+        <h2 class="text-xl font-bold md:text-2xl">{{headline}}</h2>
+        <p class="mt-2 text-sm text-gray-600 md:text-base">{{excerpt}}</p>
+
+        <!-- Only show this image on mobile for different Layout -->
+        <div class="w-full h-48 md:hidden">
+          <img class="object-cover w-full h-full mt-4 rounded-lg" src="{{image}}" alt="{{headline}}"/>
+        </div>
+
+        <!-- Features of the project -->
+        <ul class="mt-8 space-y-6 md:mt-10 lg:mt-12">
+      
+          {% for item in features %}
+          <li class="flex space-x-2 md:space-x-4 items-top">
+            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-opacity-50 rounded-lg bg-amber-300">
+              <img class="w-6 h-6" src="{{item.icon}}" alt="{{item.title}}" />
+            </div>
+
+            <div class="flex-1">
+              <p class="text-base font-semibold md:text-lg">{{item.title}}</p>
+              <p class="text-sm text-gray-600 md:text-base">{{item.description}}</p>
+            </div>
+          </li>
+        {% endfor %}
+    
+        </ul>
+
+        <a class="block mt-8 font-semibold md:mt-10 lg:mt-12 hover:underline"
+          href="{{link}}">Weitere Fotos & Details »</a>
+
+      </div>
+
+      <div class="flex-1 hidden md:block">
+        <img class="object-cover w-full h-full rounded-lg" src="{{image}}" alt="{{headline}}"/>
+      </div>
+
+    </article>
+
+    {% endmacro %}
+
+
+       {{ projekte(
+        headline='Kindergarteneinrichtung', 
+        excerpt='Neubau eines Kindergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
+        link="https://www.google.de", 
+        image="/assets/images/2020-kindergarten-konzen-1.jpeg", 
+        description='Neubau eines Kindergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
+        features= [
+          { title: "Alle Haustüren", icon: "/assets/images/messebau.jpg", description: "Feature Description 1" }, 
+          { title: "Alle Fenster", icon: "/assets/images/messebau.jpg", description: "Feature Description 2" } 
+        ]
+      )}}
+
+       {{ projekte(
+        headline='Ankleide und Badezimmer', 
+        excerpt='Neubau eisandergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
+        link="https://www.google.de", 
+        image="/assets/images/2020-kindergarten-konzen-1.jpeg", 
+        description='Neubau eines Kindergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
+        features= [
+          { title: "Alle Haustüren", icon: "/assets/images/messebau.jpg", description: "Feature Description 1" }, 
+          { title: "Alle Fenster", icon: "/assets/images/messebau.jpg", description: "Feature Description 2" } 
+        ]
+      )}}
+
+    </div>
+  
+</section>
+
+
+    
+

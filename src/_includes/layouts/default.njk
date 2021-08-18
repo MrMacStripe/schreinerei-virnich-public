@@ -1,0 +1,70 @@
+{# ---
+url: https://virnich-11ty.netlify.app
+--- #}
+<!doctype html>
+<html lang="{{language or site.language}}" class="smooth-scroll">
+  
+  <head> 
+  
+    <title>{{title +" - "+ site.name}}</title>
+    <link rel="canonical" href="{{ site.url+page.url }}" />
+     
+    {# Default meta tags #}  
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+
+    {# Meta Data and Twitter Card #}
+    <meta name="description" content="{{ description or site.description }}"/>
+    <meta property="og:title" content="{{title or site.title}}" />
+    <meta property="og:url" content="{{ site.url+page.url }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:image" content="{{ site.url }}{{image or site.socialImage}}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image"></meta>
+  
+    {# Favicons #} 
+    {# Source: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
+    <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="{{ site.touchicon }}">
+    <link rel="manifest" href="/assets/meta/manifest.webmanifest">
+
+    {# Google Fonts #}
+    {# Loading based on this article: https://csswizardry.com/2020/05/the-fastest-google-fonts/ #}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'"/> 
+    
+        {# Stylesheet - tailwindcss #}
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+
+    {# Import Alpine & Swiper #} 
+    <script type="module" src="/main.js?v={% version %}" defer></script> 
+  
+    {# Add local dependencies to head #}
+    {% block head %}
+    {% endblock %}
+     
+  </head> 
+  
+  <body class="overflow-x-hidden font-sans bg-pattern-grid text-brown-900">
+
+    {% block header %}
+      {% include "src/_includes/components/header.njk" %}
+    {% endblock %}
+    
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+
+    {% block contact %}
+      {% include "src/_includes/partials/global-contact.njk" %}
+    {% endblock %}
+
+    {% block footer %}
+      {% include "src/_includes/components/footer.njk" %}
+    {% endblock %}
+
+  </body> 
+  
+</html>

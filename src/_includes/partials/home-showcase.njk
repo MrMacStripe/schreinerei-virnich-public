@@ -1,0 +1,53 @@
+<section id="referenzen" class="py-20">
+  <header class="px-4 mx-auto">
+    <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Neueste Arbeiten</h2>
+    <p class="mx-auto mt-2 text-lg text-gray-600 md:text-center max-w-prose">Verschiedene Arbeiten aus allen Bereichen unserer Produktpalette. Von der Konstuktion individueller Möbelstücke über den Einbau von Haustüren und Fenstern bis hin zur kompletten Messebaulösung</p>
+  </header>
+
+  <div class="relative mx-auto mt-16 max-w-default"> 
+
+    <div class="relative glide"> 
+      <!-- GlideJS container -->
+      <div class="left-0 xl:overflow-visible glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+
+          <!-- Card Container -->
+          {% for item in collections.projekt %}
+
+            <li class="max-w-xs glide__slide">
+              <a href="{{item.url}}"class="relative block overflow-hidden border-2 border-opacity-25 rounded-md border-brown-900 lg:hover:border-amber-300 group">
+                <div class="aspect-w-5 aspect-h-9">
+                  <!-- Projekt image -->
+
+                  {% imageShowcase item.data.heroImage, "object-cover w-full h-full", item.data.title, "(min-width: 768px) 400px, 95vw" %}
+                </div>
+                <!-- Project Information -->
+                <div class="absolute bottom-0 px-4 pb-6 from-black bg-gradient-to-t">
+                  <h2 class="text-xl font-bold md:text-2xl text-amber-50">{{item.data.title}}</h2>
+                  <p class="mt-2 text-sm text-gray-300 md:text-base">{{item.data.page.excerpt}}</p>
+                  <p class="mt-8 text-sm font-semibold group-hover:underline text-amber-500" >Projekt ansehen »</p>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="-mb-16 cursor-default pointer-events-none glide__bullets" data-glide-el="controls[nav]">
+        {% for item in collections.projekt %}
+        {% if loop.index + 1 < loop.length %}
+          <button class="glide__bullet" data-glide-dir="={{loop.index}}"></button>
+          {# {{loop.index}} #}
+          {% endif %}
+        {%endfor%}
+
+      </div>
+  
+      <div class="relative hidden glide__arrows lg:block" data-glide-el="controls">
+        <button class="absolute bottom-0 left-0 w-12 h-12 -mb-16 text-2xl font-bold transition-all rounded-full shadow-sm text-amber-700 bg-amber-200 hover:shadow-lg hover:bg-amber-400" data-glide-dir="<">«</button>
+        <button class="absolute bottom-0 right-0 w-12 h-12 -mb-16 text-2xl font-bold transition-all rounded-full shadow-sm text-amber-700 bg-amber-200 hover:shadow-lg hover:bg-amber-400" data-glide-dir=">">»</button>
+      </div>
+    </div>
+  </div>
+
+</section>

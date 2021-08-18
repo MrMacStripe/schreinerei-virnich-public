@@ -1,0 +1,38 @@
+{
+  "name": "Webscription Building Base",
+  "description": "Basis für jede neue Webscription Webseite",
+  "url": "https://www.webscription.com",
+  "language": "de",
+  "favicon": "/assets/meta/favicon.svg",
+  "touchicon": "/assets/meta/touchicon.png",
+  "socialImage": "/assets/meta/social-image.jpg",
+  
+
+  "companyName": "Webscription",
+  "companyMotto": "Ihre Bau & Möbelschreinerei in Schmidt",
+  "companyDescription": "Die inhabergeführte Schreinerei Virnich ist auf die Produktion hochwertiger Möbel, Treppen und Messebautenu sowie die Beratung, den Verkauf und die Montage von Fenstern und Haustüren spezialisiert. Seit mehr als 25 Jahren stehen wir für Privatkunden und gewerbliche Interessenten bereit.",
+  "companyStreet": "Heimbacher Strasse 22",
+  "companyZip":"52385",
+  "companyCity": "Nideggen-Schmidt",
+  "companyPhone": "02474/555",
+  "companyFax": "02474/1795",
+  "companyMobile": "0171 111 11 11",
+
+
+  "headerNav":[
+    {"label":"Startseite","link":"/"},
+    {"label":"Leistungen","link":"/#leistungen"},
+    {"label":"Referenzen","link":"/#referenzen"},
+    {"label":"Projekte","link":"/projekte"},
+    {"label":"Team","link":"/#team"}
+  ],
+
+  
+  "footerNav":[
+    {"label":"Startseite","link":"/"},
+    {"label":"Projekte","link":"/projekte"},
+    {"label":"Datenschutzerklärung","link":"/datenschutz"},
+    {"label":"Impressum","link":"/impressum"}
+  ]
+
+}

@@ -1,0 +1,16 @@
+---
+title: Error 404 - Seite nicht gefunden
+permalink: 404.html
+layout: layouts/default.njk
+---
+
+
+{% block content %}
+<div class="px-4">
+<main class="max-w-screen-md p-6 mx-auto my-16 text-center bg-red-100 rounded-lg drop-shadow-lg">
+<h1 class="text-3xl font-extrabold">{{title}}</h1>
+<p class="mt-6">Leider existiert die von Ihnen gewünschte Seite nicht</p>
+<p class="mt-6">Besuchen Sie stattdessen die <a class="font-semibold underline" href="/">Startseite</a></p>
+</main>
+</div>
+{% endblock %}

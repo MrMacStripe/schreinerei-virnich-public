@@ -1,0 +1,109 @@
+<section id="leistungen" class="py-20">
+  <div class="px-4 mx-auto max-w-default">
+    <header class="mx-auto">
+      <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Was können wir für Sie tun?</h2>
+      <p class="mx-auto mt-2 text-lg text-gray-600 md:text-center max-w-prose">Wir bieten eine vielzahl von Leistungen. Ein Überblick: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+    </header>
+
+    <div class="grid grid-cols-1 gap-4 mt-12 md:gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card -->
+      {% macro leistungen(headline, link, icon, description) %}
+
+        <div class="relative p-3 transition-all border border-dashed rounded-lg bg-opacity-20 bg-brown-100 md:bg-transparent md:p-6 lg:border-2 lg:block border-brown-900 ">
+
+          <!-- Expand toggle on Mobile -->
+          <div class="absolute bottom-4 right-4 md:hidden text-amber-900">
+
+            <!-- Heroicon: Plus Circle -->
+            <svg :class="item.isOpen ? 'hidden' : 'inline-block'" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+
+            <!-- Heroicon: Minus Circle -->
+            <svg :class="item.isOpen ? 'inline-block' : 'hidden'"  class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+
+          </div>
+
+          <!-- Card Title & Icon -->
+          <div class="flex items-start justify-start md:block">
+
+            <div class="flex-none w-16 h-16 overflow-hidden bg-opacity-25 border-2 rounded-lg shadow-inner md:mx-auto border-amber-900 bg-amber-300 ">
+              <img class="object-cover w-full h-full" width="64" height="64" alt="{{headline}}" src="{{icon}}"/>
+            </div>
+
+            <h2 class="pl-3 text-lg font-bold md:mt-3 md:text-center md:pl-0 md:text-2xl">{{headline}}</h2>
+          </div>
+
+          <div class="mt-4 prose-sm prose md:prose md:mt-6 md:block"
+          :class="item.isOpen ? 'block' : 'hidden'">{{description}}</div>
+
+          <a class="mt-8 font-semibold md:mt-10 lg:mt-12 md:block hover:underline"
+          :to="{path: '/aktuelle-projekte', query: { filter: item.linkTo } }"
+          :class="item.isOpen ? 'block' : 'hidden'">
+          Beispiele ansehen »
+          </a>
+        </div>
+
+      {% endmacro %}
+      
+      {{ leistungen(
+        headline='Individuelle Haustüren aus Holz', 
+        link="www.google.de", 
+        icon="/assets/icons/door.svg", 
+        description='Eine Haustür ganz nach Ihren Wünschen - wir fertigen individuelle Haustüren aus Holz-Rohlingen. Ihre neue Haustüre wird in detailierter Handarbeit gebaut und anschließend von uns vor Ort montiert.'
+      )}}
+
+      {{ leistungen(
+        headline='Fenster aus Holz, Aluminium, Metall und Kunststoff', 
+        link="www.google.de", 
+        icon="/assets/icons/window.svg", 
+        description='Wir übernehmen die Beschaffung und den Einbau/Austausch Ihrer neuen Fenster. Form, Größen und Material sind individuell auswählbar. Innen- & Außenseiten sind je nach Hersteller auch in verschiedenen Materialien und Farben erhältlich.'
+      )}}
+
+      {{ leistungen(
+        headline='Haustüren aus Kunststoff', 
+        link="www.google.de", 
+        icon="/assets/icons/door.svg", 
+        description='Ihre neue Haustüre aus Kunststoff, gefertigt von einem unserer Partner nach modernsten Standards. Wir beschaffen und verbauen / tauschen Ihre Haustüre vor Ort.'
+      )}}
+
+      {{ leistungen(
+        headline='Treppenbau für den Innen-Bereich ', 
+        link="www.google.de", 
+        icon="/assets/icons/stairs.svg", 
+        description='Wangentreppen, Aufgesattelte Treppen, Kragarm-Treppen, Stufen auf Beton oder Stahlgestell, Faltwerktreppen'
+      )}}
+
+      {{ leistungen(
+        headline='Möbelbau für Privatkunden', 
+        link="www.google.de", 
+        icon="/assets/images/moebelbau-privat.jpg", 
+        description='Ankleidzimmer, Betten, Küchen, Badmöbel'
+      )}}
+
+      {{ leistungen(
+        headline='Möbelbau für gewerbliche Großprojekte', 
+        link="www.google.de", 
+        icon="/assets/images/gewerbliche-grossprojekte.jpg", 
+        description='Kindergarteneinrichtung, Komissionierwagen ,Garederoben für Kindergarten usw'
+      )}}
+
+      {{ leistungen(
+        headline='Messebau', 
+        link="www.google.de", 
+        icon="/assets/images/messebau.jpg", 
+        description='Theken, Ausstellungsstücke, Repräsentationsmöbel'
+      )}}
+
+
+      
+     
+    </div>
+  </div>         
+</section>
+
+
+
