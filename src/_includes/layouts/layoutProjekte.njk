@@ -1,34 +1,99 @@
 {% extends "layouts/default.njk" %}
 
 {% block content %}
-<div class="relative max-w-[1080px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:py-20 py-8">
-  <div class="overflow-hidden rounded-md">
-  {% imageProjektHero heroImage, "object-cover w-full h-full", title, "(min-width: 768px) 335px, 100vw" %}
-  </div>     
-  <div class="md:col-span-2">
-    <h1 class="text-3xl font-extrabold lg:text-4xl">{{title}}</h1>
-    <div class="flex mt-4 space-x-2 text-xs flex-nowrap">
-    {% for item in filter %}<div class="px-2 py-1 mb-2 text-xs font-semibold leading-none tracking-wider uppercase rounded-full text-amber-700 bg-amber-100">{{item}}</div> {%endfor%}
+  <div class="relative max-w-[1080px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:py-20 py-8">
+    <div class="overflow-hidden rounded-md">
+      {% imageProjektHero heroImage, "object-cover w-full h-full", title, "(min-width: 768px) 335px, 100vw" %}
     </div>
-    <main class="py-8 mx-auto prose lg:prose-lg">{{ content | safe }}</main>
-  </div>
+    <div class="md:col-span-2">
+      <h1 class="text-3xl font-extrabold lg:text-4xl">{{title}}</h1>
+      <div class="flex mt-4 space-x-2 text-xs flex-nowrap">
+        {% for item in filter %}
+          <div class="px-2 py-1 mb-2 text-xs font-semibold leading-none tracking-wider uppercase rounded-full text-amber-700 bg-amber-100">{{item}}</div>
+          {%endfor%}
+        </div>
+        <main class="py-8 mx-auto prose lg:prose-lg">{{ content | safe }}</main>
+      </div>
 
-  {% if galleryImages %}
-  <div class="col-span-1 mt-20 max-w-default md:col-span-3">
-    <h2 class="px-2 text-2xl font-bold border-b-2 border-amber-300">Bildergalerie</h2>
-    <div class="grid grid-cols-1 gap-2 mt-6 md:grid-cols-2 lg:grid-cols-3">
-      {% for item in galleryImages %}        
-        {% imageNewsGallery item.image, "hover:-translate-y-0.5 transition-all rounded-md cursor-pointer", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}       
-      {% endfor %} 
+      {% if galleryImages %}
+        <div class="col-span-1 mt-20 max-w-default md:col-span-3 ">
+
+          <h2 class="px-2 text-2xl font-bold border-b-2 border-amber-300" @click="showModal = true">Bildergalerie</h2>
+
+          <div class="mt-8">
+            <ul class="grid grid-cols-3 gap-2">
+              {% for item in galleryImages %}
+                <li class="splide__slide">
+                  {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div id="primary-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for item in galleryImages %}
+                  <li class="splide__slide">
+                    {% imageNewsGallery item.image, "w-full h-full object-contain", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <div id="secondary-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for item in galleryImages %}
+                  <li class="splide__slide">
+                    {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+
+      {% endif %}
+
+      <div class="mt-4">
+        <a href="/projekte" class="inline-block px-3 py-3 text-xs font-semibold leading-none transition-all border-2 rounded-md cursor-pointer whitespace-nowrap border-amber-400 hover:text-amber-200 focus:text-amber-200 hover:bg-amber-700 focus:bg-amber-700">« Zurück zur Übersicht</a>
+      </div>
+
     </div>
-  </div>
-  {% endif %}
 
-  <div class="mt-4">
-  <a href="/projekte" class="inline-block px-3 py-3 text-xs font-semibold leading-none transition-all border-2 rounded-md cursor-pointer whitespace-nowrap border-amber-400 hover:text-amber-200 focus:text-amber-200 hover:bg-amber-700 focus:bg-amber-700">« Zurück zur Übersicht</a>
   </div>
 
-</div>
-
+  <script type="module">
+  document.addEventListener( 'DOMContentLoaded', function () {
+	var secondarySlider = new Splide( '#secondary-slider', {
+		fixedWidth  : 100,
+		height      : 60,
+		gap         : 10,
+		cover       : true,
+    pagination: false,
+		isNavigation: true,
+		focus       : 'center',
+		breakpoints : {
+			'600': {
+				fixedWidth: 66,
+				height    : 40,
+			}
+		},
+	} ).mount();
+	
+	var primarySlider = new Splide( '#primary-slider', {
+		type       : 'fade',
+		heightRatio: 0.75,
+		pagination : false,
+		arrows     : false,
+		cover      : true,
+	} ); // do not call mount() here.
+	
+	primarySlider.sync( secondarySlider ).mount();
+} );
+  </script>
 {% endblock %}
-
