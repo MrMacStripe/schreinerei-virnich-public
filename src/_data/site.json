@@ -1,14 +1,14 @@
 {
-  "name": "Webscription Building Base",
-  "description": "Basis für jede neue Webscription Webseite",
-  "url": "https://www.webscription.com",
+  "name": "Schreinerei Virnich",
+  "description": "Ihre Bau & Möbelschreinerei in Schmidt",
+  "url": "https://www.schreinerei-virnich.de",
   "language": "de",
   "favicon": "/assets/meta/favicon.svg",
   "touchicon": "/assets/meta/touchicon.png",
   "socialImage": "/assets/meta/social-image.jpg",
   
 
-  "companyName": "Webscription",
+  "companyName": "Schreinerei Günter Virnich",
   "companyMotto": "Ihre Bau & Möbelschreinerei in Schmidt",
   "companyDescription": "Die inhabergeführte Schreinerei Virnich ist auf die Produktion hochwertiger Möbel, Treppen und Messebautenu sowie die Beratung, den Verkauf und die Montage von Fenstern und Haustüren spezialisiert. Seit mehr als 25 Jahren stehen wir für Privatkunden und gewerbliche Interessenten bereit.",
   "companyStreet": "Heimbacher Strasse 22",
