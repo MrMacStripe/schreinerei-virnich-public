@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   /* === END, add Assets to the bundle === */ 
 
   
-  eleventyConfig.addWatchTarget('./_site/style.css')
+  eleventyConfig.addWatchTarget('./src/tailwind.css')
   eleventyConfig.addWatchTarget('./src/main.js')
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 

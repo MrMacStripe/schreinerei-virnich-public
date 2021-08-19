@@ -1,27 +1,83 @@
 {% extends "layouts/default.njk" %}
 
+<!-- Projekte Detailseite
+=========================================================================== -->
+
 {% block content %}
-  <div class="relative max-w-[1080px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:py-20 py-8">
-    <div class="overflow-hidden rounded-md">
-      {% imageProjektHero heroImage, "object-cover w-full h-full", title, "(min-width: 768px) 335px, 100vw" %}
+
+<!-- Page Wrapper
+==================================== -->
+<div class="relative max-w-[1080px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:py-20 py-8">
+  
+  <!-- Main Image of the Project
+  ==================================== -->
+  <div class="overflow-hidden rounded-md">
+    {% imageProjektHero heroImage, "object-cover w-full h-full", title, "(min-width: 768px) 335px, 100vw" %}
+  </div>
+
+  <!-- Text Content of the Project
+  ==================================== -->
+  <div class="md:col-span-2">
+    <h1 class="text-3xl font-extrabold lg:text-4xl">{{title}}</h1>
+    <div class="flex mt-4 space-x-2 text-xs flex-nowrap">
+      {% for item in filter %}
+        <div class="px-2 py-1 mb-2 text-xs font-semibold leading-none tracking-wider uppercase rounded-full text-amber-700 bg-amber-100">{{item}}</div>
+      {%endfor%}
     </div>
-    <div class="md:col-span-2">
-      <h1 class="text-3xl font-extrabold lg:text-4xl">{{title}}</h1>
-      <div class="flex mt-4 space-x-2 text-xs flex-nowrap">
-        {% for item in filter %}
-          <div class="px-2 py-1 mb-2 text-xs font-semibold leading-none tracking-wider uppercase rounded-full text-amber-700 bg-amber-100">{{item}}</div>
-          {%endfor%}
-        </div>
-        <main class="py-8 mx-auto prose lg:prose-lg">{{ content | safe }}</main>
+    <main class="py-8 mx-auto prose lg:prose-lg">{{ content | safe }}</main>    
+  </div>
+
+  <!-- Image Gallery, conditional rendering
+  ==================================== -->
+  {% if galleryImages %}
+
+  <div class="col-span-1 md:col-span-3" x-data="{showModal:false }">
+    <div class="col-span-1 mt-20 max-w-default md:col-span-3 ">
+
+      <h2 class="px-2 text-2xl font-bold border-b-2 border-amber-300">Bildergalerie</h2>
+
+      <div class="mt-8">
+        <ul class="grid grid-cols-3 gap-2">
+          {% for item in galleryImages %}
+          
+            <li class="overflow-hidden transition-all rounded-md cursor-pointer aspect-w-3 aspect-h-2 hover:ring-amber-500 ring-2 ring-transparent hover:-translate-y-0.5" @click="showModal = ! showModal, $nextTick(() => { console.log('initiateSpliceGallery'), startSplide({{loop.index0}}) })">
+              {% imageNewsGallery item.image, "w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+            </li>
+        
+          {% endfor %}
+        </ul>
       </div>
+    </div>
 
-      {% if galleryImages %}
-        <div class="col-span-1 mt-20 max-w-default md:col-span-3 ">
+    <!-- Lightbox for the image Gallery
+    ==================================== -->
+    <section x-show="showModal" class="fixed inset-0 z-50 w-screen h-screen bg-black bg-opacity-90" >
 
-          <h2 class="px-2 text-2xl font-bold border-b-2 border-amber-300" @click="showModal = true">Bildergalerie</h2>
+      <!-- Close Button of the Lightbox -->
+      <div class="absolute z-10 w-12 h-12 text-xl font-black text-center rounded-full cursor-pointer text-amber-900 bg-amber-400 top-2 right-2 lg:top-12 lg:right-12 leading-[3rem]">X</div>
 
-          <div class="mt-8">
-            <ul class="grid grid-cols-3 gap-2">
+      <div class="p-2 lg:p-12" 
+      @click.outside="showModal = false, $nextTick(() => { console.log('destroySplideGallery'), destroySplide() })">
+
+        <!-- Lightbox main Image, syncronised with the thumbnails -->
+        <div id="primary-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for item in galleryImages %}          
+              <li class=" splide__slide">
+                <div class="splide__slide__container">
+                  {% imageNewsGallery item.image, "w-full h-full object-contain", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+                </div>
+              </li>          
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lightbox Thumbnail Sliders, syncronised with the main images -->
+        <div id="secondary-slider" class="mt-8 splide">
+          <div class="splide__track">
+            <ul class="!mx-auto  splide__list">
               {% for item in galleryImages %}
                 <li class="splide__slide">
                   {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
@@ -29,71 +85,65 @@
               {% endfor %}
             </ul>
           </div>
-
-          <div id="primary-slider" class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                {% for item in galleryImages %}
-                  <li class="splide__slide">
-                    {% imageNewsGallery item.image, "w-full h-full object-contain", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-
-          <div id="secondary-slider" class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                {% for item in galleryImages %}
-                  <li class="splide__slide">
-                    {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-
         </div>
 
-
-      {% endif %}
-
-      <div class="mt-4">
-        <a href="/projekte" class="inline-block px-3 py-3 text-xs font-semibold leading-none transition-all border-2 rounded-md cursor-pointer whitespace-nowrap border-amber-400 hover:text-amber-200 focus:text-amber-200 hover:bg-amber-700 focus:bg-amber-700">« Zurück zur Übersicht</a>
       </div>
-
-    </div>
+    </section>
 
   </div>
 
-  <script type="module">
-  document.addEventListener( 'DOMContentLoaded', function () {
-	var secondarySlider = new Splide( '#secondary-slider', {
-		fixedWidth  : 100,
-		height      : 60,
-		gap         : 10,
-		cover       : true,
+  {% endif %}
+
+  <!-- Back to overview button
+  ==================================== -->
+  <div class="mt-4">
+    <a href="/projekte" class="inline-block px-3 py-3 text-xs font-semibold leading-none transition-all border-2 rounded-md cursor-pointer whitespace-nowrap border-amber-400 hover:text-amber-200 focus:text-amber-200 hover:bg-amber-700 focus:bg-amber-700">« Zurück zur Übersicht</a>
+  </div>
+
+</div>
+
+<script type="module">
+
+window.startSplide = function(startSlide) { 
+  var secondarySlider = new Splide( '#secondary-slider', {
+    fixedWidth  : 100,
+    height      : 60,
+    gap         : 10,
+    start       : startSlide,
+    rewind: true, 
     pagination: false,
-		isNavigation: true,
-		focus       : 'center',
-		breakpoints : {
-			'600': {
-				fixedWidth: 66,
-				height    : 40,
-			}
-		},
-	} ).mount();
-	
-	var primarySlider = new Splide( '#primary-slider', {
-		type       : 'fade',
-		heightRatio: 0.75,
-		pagination : false,
-		arrows     : false,
-		cover      : true,
-	} ); // do not call mount() here.
-	
-	primarySlider.sync( secondarySlider ).mount();
-} );
-  </script>
+    isNavigation: true,		
+    arrows:false,
+    breakpoints : {
+      '600': { 
+        fixedWidth: 66,
+        height    : 40,
+      }
+    },
+  } ).mount();
+
+  var primarySlider = new Splide( '#primary-slider', {
+    type       : 'loop',
+    rewind: true,
+    fixedHeight: '70vh',
+    pagination : false,
+    start       : startSlide,
+    arrows     : true,
+    cover      : true,
+  } ); // do not call mount() here.
+
+  primarySlider.sync( secondarySlider ).mount();
+  window.primarySlider = primarySlider;
+  window.secondarySlider = secondarySlider;
+}
+
+window.destroySplide = function () {
+  console.log(primarySlider.index );
+  console.log(secondarySlider.index );
+  secondarySlider.destroy();
+  primarySlider.destroy();
+
+  console.log('destroyed the sliders');
+};
+</script>
 {% endblock %}
