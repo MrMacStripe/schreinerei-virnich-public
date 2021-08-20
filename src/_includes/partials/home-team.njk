@@ -1,4 +1,3 @@
-
 <section id="team" class="py-20">
   <header class="px-4 mx-auto">
     <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Unser Team</h2>
@@ -7,36 +6,24 @@
 
   <div class="px-4 mx-auto mt-12 max-w-default">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-3 lg:gap-y-12 lg:gap-x-8">
-      {% macro team(name, education, position, image) %}
-      <div class="flex items-center justify-start">
-        <img src="{{image}}" alt="{{name}}" loading="lazy"
-        class="flex-shrink-0 object-cover w-24 h-24 rounded-lg shadow-inner" />
 
-        <div class="ml-4 md:ml-6">
-          <p class="text-xl font-bold">{{name}}</p>
-          {% if education %}<p class="mt-2 font-semibold">{{education}}</p>{% endif %}
-          {% if position %}<p class="text-gray-600">{{position}}</p>{% endif %}
+      {% for person in team %}
+        <div class="flex items-center justify-start">
+          <div class="w-24 h-24 overflow-hidden rounded-md">
+            {% img person.image, "object-cover w-full h-full", person.name, "96px" %}
+          </div>
+          <div class="ml-4 md:ml-6">
+            <p class="text-xl font-bold">{{person.name}}</p>
+            {% if person.education %}
+              <p class="mt-2 font-semibold">{{person.education}}</p>
+            {% endif %}
+            {% if person.position %}
+              <p class="text-gray-600">{{person.position}}</p>
+            {% endif %}
+          </div>
         </div>
-      </div>
-      {% endmacro %}
+      {% endfor %}
 
-      {{ team("Günter Virnich", "Tischler-Meister","Chef","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}
-
-      {{ team("Gabi Virnich", "Bankkauffrau","Büro","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}
-
-      {{ team("Ardalan Saberi", "Tischle-Geselle","Möbelbau","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}
-
-      {{ team("Florian Witt", "Tischler-Geselle","Fenster- & Türenmontage","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}
-
-      {{ team("Rafael Schönewald", "Tischler-Meister","Haustüren & Treppen, Aufmaße","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}
-
-      {{ team("Dirk Stollenwerk", "Tischler-Meister","Treppen, Möbel, Haustüren","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}
-
-      {{ team("Jonas Stange", "Tischler-Geselle","Fenster- & Türenmontage","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}      
-
-      {{ team("Simon Dick", "Tischler-Geselle","Fenster- & Türenmontage","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}  
-
-      {{ team("Mehdi Naderi", "Aushilfe","Möbelbau, Oberflächen","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")}}      
     </div>
   </div>
 

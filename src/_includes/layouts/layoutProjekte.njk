@@ -56,7 +56,7 @@
       <!-- Close Button of the Lightbox -->
       <div class="absolute z-10 w-12 h-12 text-xl font-black text-center rounded-full cursor-pointer text-amber-900 bg-amber-400 top-2 right-2 lg:top-12 lg:right-12 leading-[3rem]">X</div>
 
-      <div class="p-2 lg:p-12" 
+      <div class="p-2 lg:p-4 3xl:p-12" 
       @click.outside="showModal = false, $nextTick(() => { console.log('destroySplideGallery'), destroySplide() })">
 
         <!-- Lightbox main Image, syncronised with the thumbnails -->
@@ -66,7 +66,7 @@
               {% for item in galleryImages %}          
               <li class=" splide__slide">
                 <div class="splide__slide__container">
-                  {% imageNewsGallery item.image, "w-full h-full object-contain", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+                  {% imageNewsGallery item.image, "w-full h-full object-contain", item.alt, "95vw" %}
                 </div>
               </li>          
               {% endfor %}
@@ -80,7 +80,7 @@
             <ul class="!mx-auto  splide__list">
               {% for item in galleryImages %}
                 <li class="splide__slide">
-                  {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+                  {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "100px" %}
                 </li>
               {% endfor %}
             </ul>
@@ -106,14 +106,18 @@
 
 window.startSplide = function(startSlide) { 
   var secondarySlider = new Splide( '#secondary-slider', {
+    rewind: true, 
+    start       : startSlide,
     fixedWidth  : 100,
+    width: '95vw',
     height      : 60,
     gap         : 10,
-    start       : startSlide,
-    rewind: true, 
+    waitForTransition: false,
     pagination: false,
+    keyboard: false,
     isNavigation: true,		
     arrows:false,
+        perMove: 1,
     breakpoints : {
       '600': { 
         fixedWidth: 66,
@@ -123,13 +127,23 @@ window.startSplide = function(startSlide) {
   } ).mount();
 
   var primarySlider = new Splide( '#primary-slider', {
-    type       : 'loop',
-    rewind: true,
-    fixedHeight: '70vh',
-    pagination : false,
+    rewind: true, 
     start       : startSlide,
+    lazyLoad: 'nearby',
+    width: '95vw',
+    fixedHeight: '75vh',
+    waitForTransition: false,
+    pagination : false,
+    perPage: 1,
     arrows     : true,
-    cover      : true,
+    
+    perMove: 1,
+    breakpoints : {
+      '600': { 
+        fixedHeight: '65vh',
+      }
+    },
+
   } ); // do not call mount() here.
 
   primarySlider.sync( secondarySlider ).mount();

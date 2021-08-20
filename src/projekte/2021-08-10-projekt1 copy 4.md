@@ -2,7 +2,7 @@
 title: Waschtische & Spiegelschränke
 tags: [projekt, Großprojekte, Möbelbau]
 layout: layouts/layoutProjekte.njk
-heroImage: "https://virnich.mauricestuffer.com/assets/static/2020-roeb-hotel-badezimmer-1.1c20d4c.c623b2e5aa59625c448febe19426aa20.jpeg"
+heroImage: "src/assets/images/hero.jpg"
 galleryImages:
   - image: https://virnich.mauricestuffer.com/assets/static/2020-roeb-hotel-badezimmer-1.1c20d4c.c623b2e5aa59625c448febe19426aa20.jpeg
     alt: AMG GT3

@@ -1,0 +1,51 @@
+[
+  {
+    "headline":"Individuelle Haustüren aus Holz", 
+    "link":"www.google.de", 
+    "icon":"src/assets/leistungen/door.svg", 
+    "description":"Eine Haustür ganz nach Ihren Wünschen - wir fertigen individuelle Haustüren aus Holz-Rohlingen. Ihre neue Haustüre wird in detailierter Handarbeit gebaut und anschließend von uns vor Ort montiert."
+  },
+
+  {
+    "headline":"Fenster aus Holz, Aluminium, Metall und Kunststoff", 
+    "link":"www.google.de", 
+    "icon":"src/assets/leistungen/window.svg", 
+    "description":"Wir übernehmen die Beschaffung und den Einbau/Austausch Ihrer neuen Fenster. Form, Größen und Material sind individuell auswählbar. Innen- & Außenseiten sind je nach Hersteller auch in verschiedenen Materialien und Farben erhältlich."
+  },
+
+  {
+    "headline":"Haustüren aus Kunststoff", 
+    "link":"www.google.de", 
+    "icon":"src/assets/leistungen/door.svg", 
+    "description":"Ihre neue Haustüre aus Kunststoff, gefertigt von einem unserer Partner nach modernsten Standards. Wir beschaffen und verbauen / tauschen Ihre Haustüre vor Ort."
+  },
+
+  {
+    "headline":"Treppenbau für den Innen-Bereich ", 
+    "link":"www.google.de",  
+    "icon":"src/assets/leistungen/stairs.svg", 
+    "description":"Wangentreppen, Aufgesattelte Treppen, Kragarm-Treppen, Stufen auf Beton oder Stahlgestell, Faltwerktreppen"
+  },
+
+  {
+    "headline":"Möbelbau für Privatkunden", 
+    "link":"www.google.de", 
+    "icon":"src/assets/images/moebelbau-privat.jpg", 
+    "description":"Ankleidzimmer, Betten, Küchen, Badmöbel"
+  },
+
+  {
+    "headline":"Möbelbau für gewerbliche Großprojekte", 
+    "link":"www.google.de", 
+    "icon":"src/assets/images/gewerbliche-grossprojekte.jpg", 
+    "description":"Kindergarteneinrichtung, Komissionierwagen ,Garederoben für Kindergarten usw"
+  },
+
+  {
+    "headline":"Messebau", 
+    "link":"www.google.de", 
+    "icon":"src/assets/images/messebau.jpg", 
+    "description":"Theken, Ausstellungsstücke, Repräsentationsmöbel"
+  }
+
+]

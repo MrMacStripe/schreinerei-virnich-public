@@ -25,6 +25,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("imageHomeHero", imageHomeHero);
   eleventyConfig.addNunjucksAsyncShortcode("imageShowcase", imageShowcase);
   eleventyConfig.addNunjucksAsyncShortcode("imageProjektHero", imageProjektHero);
+  eleventyConfig.addNunjucksAsyncShortcode("imageDefault", imageDefault);
+  eleventyConfig.addNunjucksAsyncShortcode("img", img);
   /* === END, add different image shortcodes to the bundle === */ 
 
 
@@ -89,6 +91,76 @@ module.exports = function (eleventyConfig) {
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
     return Image.generateHTML(metadata, imageAttributes);
   }
+
+ 
+  async function imageDefault(src, classes, alt, sizes = "100vw", loading="lazy") {
+    if(alt === undefined) {
+      // You bet we throw an error on missing alt (alt="" works okay)
+      throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+    }
+  
+    let metadata = await Image(src, {
+      widths: [160,320,640,1280,1920,null],
+      formats: ['webp', 'jpeg'],
+      urlPath: "/assets/images/",
+      outputDir: "./_site/assets/images/",
+    });
+  
+    let lowsrc = metadata.jpeg[0];
+    let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
+  
+    return `<picture>
+      ${Object.values(metadata).map(imageFormat => {
+        return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
+      }).join("\n")}
+        <img
+          class="${classes}"
+          src="${lowsrc.url}"
+          width="${highsrc.width}"
+          height="${highsrc.height}"
+          alt="${alt}"
+          loading="${loading}"
+          decoding="async" />
+      </picture>`;
+  }
+
+
+
+  async function img(src, classes, alt, sizes = "100vw", loading="lazy") {
+    if(alt === undefined) {
+      // You bet we throw an error on missing alt (alt="" works okay)
+      throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+    }
+  
+    let metadata = await Image(src, {
+      widths: [160,320,640,1280,1920,null],
+      formats: ['jpeg'],
+      urlPath: "/assets/images/",
+      outputDir: "./_site/assets/images/",
+    });
+  
+    let lowsrc = metadata.jpeg[0];
+    let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
+  
+    return `<img
+      ${Object.values(metadata).map(imageFormat => {
+        return ` srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}" `;
+      }).join("\n")}        
+        class="${classes}"
+        src="${lowsrc.url}"
+        width="${highsrc.width}"
+        height="${highsrc.height}"
+        alt="${alt}"
+        loading="${loading}"
+        decoding="async" />`;
+  }
+
+
+
+
+
+
+
 
   async function imageNewsGallery(src, classes, alt, sizes) {
     let metadata = await Image(src, {

@@ -20,13 +20,13 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "alpinejs": "^3.2.3",
-    "concurrently": "^6.2.0",
+    "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
     "tailwindcss": "^2.2.7"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.9.0",
+    "@11ty/eleventy-img": "^0.10.0",
     "@alpinejs/intersect": "^3.2.3",
     "@alpinejs/persist": "^3.2.3",
     "@alpinejs/trap": "^3.2.3",
@@ -36,6 +36,6 @@
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
-    "esbuild": "^0.12.19"
+    "esbuild": "^0.12.21"
   }
 }
