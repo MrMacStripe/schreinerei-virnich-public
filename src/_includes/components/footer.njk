@@ -4,7 +4,7 @@
 
     <!-- Left column -->
     <div class="md:col-span-2">
-      <a href="/" aria-label="Startseite">
+      <a href="/#hero" aria-label="Startseite">
         <img class="w-1/3" src="/assets/meta/logo-virnich-schreinerei.svg" alt="Logo {{site.companyName}}"/>
       </a>
       <p class="mt-6 max-w-prose">{{site.companyDescription}}</p>
@@ -23,7 +23,7 @@
       
       {% set collection = site.footerNav %}
       {% for item in collection %}
-        <li class="px-4 cursor-pointer hover:underline">
+        <li class="px-4 my-2 cursor-pointer hover:underline">
           <a href="{{item.link}}" aria-label="{{item.label}}">{{item.label}}
             <!-- Heroicon: Double Chevron Right -->
 

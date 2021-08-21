@@ -12,7 +12,7 @@ eleventyNavigation:
   <h1 class="text-4xl font-extrabold tracking-tight">{{title}}</h1>
   <p class="mt-6 text-lg max-w-prose">{{description}}</p>
 
-  <div class="sticky top-0 flex flex-wrap items-center justify-start py-2 mt-16 space-x-2 md:space-x-4 lg:flex-nowrap">
+  <div class="relative flex flex-wrap items-center justify-start py-2 mt-16 space-x-2 md:space-x-4 lg:flex-nowrap">
     <p class="mb-2 text-base font-semibold">Filter:</p>
 
     {% set projektTags =collections | keys | sort | except('all','projekt','post','posts') %}
@@ -26,25 +26,41 @@ eleventyNavigation:
   </div>
     
   <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3 md:gap-12 ">
+  
   {% for item in collections.projekt %}
-    <article class="relative hover:drop-shadow-md hover:-translate-y-0.5 transition-all hover:cursor-pointer pb-20 overflow-hidden bg-white border-2 rounded-lg group hover:border-amber-300" x-show="'{{item.data.tags}}'.includes(filter)||filter==false" >
-      <a href="{{item.url}}">
-      <div class="aspect-w-3 aspect-h-2">
-      {% imageNewsGallery item.data.heroImage, "w-full h-full object-cover", item.data.title, "(min-width: 768px) 320px, 100vw" %}         
-      </div>
-      <div class="px-4 mt-6">
-        <!-- project Tags -->
-        <div class="flex flex-wrap">
-         {% for item in item.data.tags | sort | except("projekt") %}
-          <span class="p-1 mb-2 mr-2 text-[11px] font-medium leading-none tracking-wider uppercase rounded-full text-amber-700 bg-amber-100">{{item}}</span>
-          {% endfor %}
+    <article class="relative overflow-hidden transition-all bg-white border-2 rounded-lg lg:pb-20 hover:drop-shadow-md hover:cursor-pointer group hover:border-amber-300"
+     x-show="'{{item.data.tags}}'.includes(filter)||filter==false" >
+
+      <a href="{{item.url}}" class="grid grid-cols-3 gap-2 lg:block">
+        <div class="col-span-1 lg:aspect-w-3 lg:aspect-h-2">
+        {% imageNewsGallery item.data.heroImage, "w-full h-full object-cover", item.data.title, "(min-width: 768px) 320px, 120px" %}         
         </div>
-        <h2 class="text-xl font-bold md:text-2xl ">{{ item.data.title }}</h2>
-        <p class="mt-2 text-sm text-gray-600 md:text-base">{{item.data.page.excerpt}}</p>
-        <p class="absolute px-2 py-1 border rounded-lg border-amber-400 bottom-4 group-hover:underline">Projekt ansehen »</p>     
+
+        <div class="col-span-2 px-4 my-6 lg:mb-0">
+          <!-- project Tags -->
+          <div class="flex flex-wrap">
+          {% for item in item.data.tags | sort | except("projekt") %}
+            <span class="p-1 mb-2 mr-2 text-[0.5rem] lg:text-sm  font-medium leading-none tracking-wider uppercase rounded-full text-amber-700 bg-amber-100">
+            {{item}}
+            </span>
+          {% endfor %}
+          </div>
+
+          <h2 class="text-base font-bold md:text-2xl ">{{ item.data.title }}</h2>
+
+          <p class="mt-2 text-sm text-gray-600 md:text-base">
+          {{item.data.page.excerpt}}
+          </p>
+
+          <p class="py-1 pr-2 mt-4 font-semibold lg:px-2 lg:absolute lg:mt-0 text-amber-500 bottom-4 group-hover:underline">
+          Projekt ansehen »
+          </p>
+        </div>  
       </a>
+
     </article>
   {% endfor %}
+
      </div> 
 
 </main>

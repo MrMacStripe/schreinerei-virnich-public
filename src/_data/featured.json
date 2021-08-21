@@ -1,0 +1,33 @@
+[
+  {
+  "headline":"Neubau Kindergarten Konzen", 
+  "excerpt":"Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.",
+  "images":[
+    "/assets/images/2020-kindergarten-konzen-1.jpeg",
+    "/assets/images/2020-kindergarten-konzen-1.jpeg"
+  ],
+  "features": [
+      { "title": "Lieferung und Einbau aller Haustüren und Fenster" }, 
+      { "title": "Innenausstattung " } 
+    ],
+    "customerName":"Kindergarten Konzen",
+    "customerPosition": "Auftraggeber Stadt",
+    "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
+  },
+
+ {
+  "headline":"Ankleide und Badezimmer", 
+  "excerpt":"Renovierung eines Schlaf- und Ankleidezimmers bei einem Privatkunden. De",
+  "images":[
+    "/assets/images/2020-kindergarten-konzen-1.jpeg",
+    "/assets/images/2020-kindergarten-konzen-1.jpeg"
+  ],
+  "features": [
+    { "title": "Lieferung und Einbau aller Haustüren und Fenster" }, 
+    { "title": "Innenausstattung " } 
+  ],
+  "customerName":"Kindergarten Konzen",
+  "customerPosition": "Auftraggeber Stadt",
+  "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
+  }
+]

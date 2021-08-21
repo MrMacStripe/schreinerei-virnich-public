@@ -1,87 +1,104 @@
-<section id="projekte" class="py-20">
+<section id="projekte" class="py-20 bg-opacity-50 bg-brown-100">
   <header class="px-4 mx-auto">
-    <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Wir stellen vor: Besondere Projekte</h2>
+    <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Wir stellen vor: Referenzprojekte</h2>
     <p class="mx-auto mt-2 text-lg text-gray-600 md:text-center max-w-prose">Regelmäßig betreuen wir einzigartige Projekte, auf die wir besonders stolz sind. Dabei handelt es sich manchmal um einen Großauftrag, der besonders viele unserer Leistungen in Anspruch nimmt, oder aber um ein Projekt, das die handwerkliche Begabung unserer Mitarbeiter besonders herausstellt. Wir aktualisieren diese Projekte regelmäßig.</p>
   </header>
 
-  <div class="px-4 mx-auto mt-16 space-y-16 md:mt-20 md:space-y-20 max-w-default">
+  <div class="px-4 mx-auto mt-16 space-y-16 divide-y-2 md:divide-y-0 md:mt-20 md:space-y-24 max-w-default divide-brown-900">
 
     <!-- Container for projects -->
     
-    {% macro projekte(headline, link, image, description, excerpt, features) %}
-    <article class="flex items-start flex-nowrap md:space-x-8 md:even:flex-row-reverse md:even:space-x-reverse">
+    {% for item in featured %}
+      <article class="flex flex-wrap items-start pt-12 md:pt-0 md:flex-nowrap md:space-x-8 md:even:flex-row-reverse md:even:space-x-reverse" x-data="{i:{{loop.index}} }" x-intersect.once="window.parent.gallery(i)">
 
-      <div class="flex-1">
+        <div class="flex-auto md:flex-1">
 
-        <!-- Project Description -->
-        <h2 class="text-xl font-bold md:text-2xl">{{headline}}</h2>
-        <p class="mt-2 text-sm text-gray-600 md:text-base">{{excerpt}}</p>
+          <!-- Project Description -->
+          <h2 class="text-xl font-bold md:text-2xl">{{item.headline}}</h2>
+          <p class="mt-2 text-sm text-gray-600 md:text-base">{{item.excerpt}}</p>
 
-        <!-- Only show this image on mobile for different Layout -->
-        <div class="w-full h-48 md:hidden">
-          <img class="object-cover w-full h-full mt-4 rounded-lg" src="{{image}}" alt="{{headline}}"/>
+          <!-- Features of the project -->
+          <ul class="mt-4 space-y-2 md:mt-10 lg:mt-12">
+
+            {% for item in item.features %}
+              <li class="flex space-x-2 md:space-x-4 items-top">
+
+                <div class="flex-1">
+                  <p class="text-sm font-medium lg:text-base">› {{item.title}}</p>
+                </div>
+              </li>
+            {% endfor %}
+
+          </ul>
+
         </div>
 
-        <!-- Features of the project -->
-        <ul class="mt-8 space-y-6 md:mt-10 lg:mt-12">
-      
-          {% for item in features %}
-          <li class="flex space-x-2 md:space-x-4 items-top">
-            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-opacity-50 rounded-lg bg-amber-300">
-              <img class="w-6 h-6" src="{{item.icon}}" alt="{{item.title}}" />
+        <div class="flex-auto md:flex-1">
+          <div class="splide primary-slider-{{loop.index}}">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for item in item.images %}
+                  <li class="splide__slide">
+                    <div class="aspect-w-4 aspect-h-3">
+                      <img class="object-cover w-full h-full overflow-hidden rounded-lg" src="{{item}}" alt="Ein Bild"/>
+                    </div>
+                  </li>
+                  {%endfor%}
+              </ul>
             </div>
-
-            <div class="flex-1">
-              <p class="text-base font-semibold md:text-lg">{{item.title}}</p>
-              <p class="text-sm text-gray-600 md:text-base">{{item.description}}</p>
+          </div>
+          <div class="mt-1 splide secondary-slider-{{loop.index}}">
+            <div class="splide__track">
+              <ul class="splide__list">
+              {% for item in item.images %}
+                <li class="splide__slide">
+                <div class="aspect-w-4 aspect-h-3">
+                  <img class="object-cover w-full h-full overflow-hidden rounded-md" src="{{item}}" alt="Ein Bild"/>
+                  </div>
+                </li>
+                {%endfor%}           
+              </ul>
             </div>
-          </li>
-        {% endfor %}
-    
-        </ul>
+          </div>
+        </div>
 
-        <a class="block mt-8 font-semibold md:mt-10 lg:mt-12 hover:underline"
-          href="{{link}}">Weitere Fotos & Details »</a>
+      </article>
+    {% endfor %}
 
-      </div>
+  </div>
 
-      <div class="flex-1 hidden md:block">
-        <img class="object-cover w-full h-full rounded-lg" src="{{image}}" alt="{{headline}}"/>
-      </div>
-
-    </article>
-
-    {% endmacro %}
-
-
-       {{ projekte(
-        headline='Kindergarteneinrichtung', 
-        excerpt='Neubau eines Kindergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
-        link="https://www.google.de", 
-        image="/assets/images/2020-kindergarten-konzen-1.jpeg", 
-        description='Neubau eines Kindergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
-        features= [
-          { title: "Alle Haustüren", icon: "/assets/images/messebau.jpg", description: "Feature Description 1" }, 
-          { title: "Alle Fenster", icon: "/assets/images/messebau.jpg", description: "Feature Description 2" } 
-        ]
-      )}}
-
-       {{ projekte(
-        headline='Ankleide und Badezimmer', 
-        excerpt='Neubau eisandergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
-        link="https://www.google.de", 
-        image="/assets/images/2020-kindergarten-konzen-1.jpeg", 
-        description='Neubau eines Kindergartens in Konzen. Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.',
-        features= [
-          { title: "Alle Haustüren", icon: "/assets/images/messebau.jpg", description: "Feature Description 1" }, 
-          { title: "Alle Fenster", icon: "/assets/images/messebau.jpg", description: "Feature Description 2" } 
-        ]
-      )}}
-
-    </div>
-  
 </section>
 
-
+<script type="module">
+  
+ var gallery = function(i) {
+    var secondarySlider = new Splide('.secondary-slider-'+i, {
+      fixedWidth: 96,
+      gap: 10,
+      cover: true,
+      arrows: false,
+      isNavigation: true,
+      focus: 'center',
+      breakpoints: {
+        '600': {
+          fixedWidth: 66,
+          height: 40
+        }
+      }
+    }).mount();
     
+    var primarySlider = new Splide('.primary-slider-'+i, {
+      type: 'fade',
+      
+      pagination: false,
+      arrows: false,
+      cover: true
+    }); // do not call mount() here.
 
+    primarySlider
+      .sync(secondarySlider)
+      .mount();
+  }
+
+  window.gallery = gallery;
+</script>

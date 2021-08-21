@@ -1,7 +1,7 @@
-<section id="home-hero" class="relative border-b-2 border-amber-900">
+<section id="hero" class="relative border-b-2 border-amber-900">
 
   <div class="absolute inset-0 flex flex-wrap w-full h-full md:flex-none -z-1">
-    <div class="w-full h-full md:w-7/12 bg-brown-100 bg-pattern-grid"></div>
+    <div class="w-full h-full md:w-7/12 bg-brown-100 bg-pattern-grid--dark"></div>
     <div class="flex-1 hidden w-full h-full md:block bg-brown-900"></div>
   </div>
 
@@ -13,7 +13,7 @@
     ABC
      #}
     <div class="w-full max-w-screen-md md:py-16 md:pr-12">
-      <svg class="hidden w-10/12 mx-auto md:block md:ml-0" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 664 231">
+      {# <svg class="hidden w-10/12 mx-auto md:block md:ml-0" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 664 231">
         <g transform="translate(-204.989 -155.444)">
           <path fill="none" d="M204.989 155.444h663.469v230.248H204.989z"/>
           <clipPath id="a">
@@ -28,11 +28,11 @@
             <path fill="none" stroke="#4E2601" stroke-width="13.68" d="M0-522a495.348 495.348 0 00-32 75 495.96 495.96 0 00-22.641 105.233m16.82-267.433c49.268.343 57.902 11.363 59.821 17.2 2.043 6.215-1.836 11.696-9 30a355.497 355.497 0 00-13 40c-6.308 57.594 7.233 83.334 22 96 20.559 17.635 47.909 13.715 71 40 11.701 13.32 16.825 28.154 19.325 38.634M-127-335.462A1991.13 1991.13 0 01-33-624l-24-5a1733.998 1733.998 0 00-93.671 296.113m-24.143 2.889A1385.897 1385.897 0 01-127-592a411.038 411.038 0 00-66 44 411.295 411.295 0 00-66 68 785.654 785.654 0 00-6 69 785.829 785.829 0 001.613 93.885m-90.19 16.857C-359.604-307.05-365.674-315.237-371-325c-22.937-42.045-16.853-85.418-13-104a2409.331 2409.331 0 0017-87c3.864-21.926 5.905-35.325-2-43-10.713-10.401-32.725-3.523-44 0-28.688 8.964-48.201 28.054-60 43 5.285 44.783-2.258 76.996-10 98-22.318 60.546-67.502 85.468-77 153a173.42 173.42 0 00-1.115 37.879M-456 9a559.153 559.153 0 00-64 40 559.347 559.347 0 00-68 58m74.441-367.831A682.26 682.26 0 00-507-171c10.192 72.83 30.733 133.55 51 180a1757.82 1757.82 0 01314-82 1757.68 1757.68 0 01317-23m-771-105c5.495-4.462 74.661-54.806 82.441-59.831a2256.058 2256.058 0 01250.172-56.284A2245.7 2245.7 0 01-101-338a2247.77 2247.77 0 01284-8 1495.486 1495.486 0 011 132 1496.376 1496.376 0 01-9 118C117.772-83.572 73.761-68.306 43-56 17.669-45.866-37.603-22.168-38-22a2626.054 2626.054 0 00-267 47 2626.213 2626.213 0 00-283 82 563.255 563.255 0 01-59-119 563.058 563.058 0 01-28-117 938.515 938.515 0 0179-72z" transform="matrix(.22027 0 0 .21836 356.657 296.235)"/>
           </g>
         </g>
-      </svg>
+      </svg> #}
       <div class="mt-6 md:mt-16">
-        <h1 class="text-2xl font-black md:hidden text-amber-900">{{site.companyName}}</h1>
-        <h2 class="text-xl font-medium">{{site.companyMotto}}</h2>
-        <p class="mt-8 text-lg font-medium md:text-xl">{{site.companyDescription}}</p>
+        <h1 class="text-2xl font-black lg:text-4xl text-amber-900">{{site.companyName}}</h1>
+        <h2 class="text-xl font-medium opacity-80">{{site.companyMotto}}</h2>
+        <p class="mt-8 text-lg font-medium">{{site.companyDescription}}</p>
         <div class="mt-12">{% include "src/_includes/components/contact-information.njk" %}</div>
       </div>
     </div>

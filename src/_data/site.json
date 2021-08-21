@@ -20,10 +20,9 @@
 
 
   "headerNav":[
-    {"label":"Startseite","link":"/"},
     {"label":"Leistungen","link":"/#leistungen"},
-    {"label":"Referenzen","link":"/#referenzen"},
-    {"label":"Projekte","link":"/projekte"},
+    {"label":"Referenzen","link":"/#projekte"},
+    {"label":"Neuste Arbeiten","link":"/#galerie"},
     {"label":"Team","link":"/#team"}
   ],
 
