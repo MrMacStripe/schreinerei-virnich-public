@@ -7,11 +7,12 @@
     "/assets/images/2020-kindergarten-konzen-1.jpeg"
   ],
   "features": [
-      { "title": "Lieferung und Einbau aller Haustüren und Fenster" }, 
-      { "title": "Innenausstattung " } 
-    ],
+    "Lieferung und Einbau aller Haustüren und Fenster", 
+    "Türen im Innenbereich", 
+    "Spinde und Umkleidemöglichkeiten für die Kinder"
+  ],
     "customerName":"Kindergarten Konzen",
-    "customerPosition": "Auftraggeber Stadt",
+    "customerPosition": "Giesela Stadtschnepfe",
     "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
   },
 
@@ -23,8 +24,8 @@
     "/assets/images/2020-kindergarten-konzen-1.jpeg"
   ],
   "features": [
-    { "title": "Lieferung und Einbau aller Haustüren und Fenster" }, 
-    { "title": "Innenausstattung " } 
+    "Lieferung und Einbau aller Haustüren und Fenster", 
+    "Innenausstattung "
   ],
   "customerName":"Kindergarten Konzen",
   "customerPosition": "Auftraggeber Stadt",

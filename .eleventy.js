@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.addWatchTarget('./src/tailwind.css')
   eleventyConfig.addWatchTarget('./src/main.js')
+  eleventyConfig.addWatchTarget('./src/**/*.js')
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   /* === START, add different image shortcodes to the bundle === */ 
