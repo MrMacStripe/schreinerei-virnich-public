@@ -20,7 +20,6 @@
     "alpinejs": "^3.2.3",
     "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
-    "html-minifier": "^4.0.0",
     "tailwindcss": "^2.2.7"
   },
   "dependencies": {
