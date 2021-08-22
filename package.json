@@ -4,20 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx rimraf _site .cache & concurrently \"npm run tailwind\" \"npm run 11ty\" ",
-    "build": "npx rimraf _site .cache & npm run 11ty-production & npm run tailwind-production",
-    "11ty": "npx eleventy --serve",
-    "tailwind": "npx tailwindcss -i ./src/tailwind.css  -o ./_site/style.css --watch --minify",
+    "dev": "npx rimraf _site .cache & concurrently \"npm run tailwind\" \"npx eleventy --serve\" ",
+    "build": "npx rimraf _site .cache & npm run tailwind-production & npm run 11ty-production ",
+    "tailwind": "npx tailwindcss -i ./src/tailwind.css  -o ./_site/style.css --watch",
     "tailwind-production": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify",
     "11ty-production": "cross-env ELEVENTY_PRODUCTION=true npx eleventy",
-    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx eleventy"
+    "netlify": "npx tailwind-production & npx eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Maurice Stuffer - Webscription",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-navigation": "^0.3.2",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "alpinejs": "^3.2.3",
     "concurrently": "^6.2.1",
@@ -30,12 +28,12 @@
     "@alpinejs/intersect": "^3.2.3",
     "@alpinejs/persist": "^3.2.3",
     "@alpinejs/trap": "^3.2.3",
-    "@glidejs/glide": "^3.4.1",
     "@splidejs/splide": "^2.4.21",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
+    "animejs": "^3.2.1",
     "esbuild": "^0.12.21"
   }
 }

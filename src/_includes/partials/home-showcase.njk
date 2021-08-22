@@ -17,7 +17,7 @@
 
           <div class="aspect-w-5 aspect-h-8">
             <!-- Projekt image -->
-            {% imageShowcase item.data.heroImage, "object-cover w-full h-full", item.data.title, "(min-width: 768px) 400px, 95vw" %}
+            {% img item.data.heroImage, "object-cover w-full h-full", item.data.title, "(min-width: 768px) 400px, 95vw" %}
           </div>
           <!-- Project Information -->
           <div class="absolute bottom-0 px-4 pb-6 from-black bg-gradient-to-t">
@@ -33,7 +33,7 @@
 </div> 
 
 </section> 
-
+ 
 <script type="module">
 new Splide( '#splide',{
   perMove: 1,

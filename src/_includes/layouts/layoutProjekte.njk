@@ -12,7 +12,7 @@
   <!-- Main Image of the Project
   ==================================== -->
   <div class="overflow-hidden rounded-md">
-    {% imageProjektHero heroImage, "object-cover w-full h-full", title, "(min-width: 768px) 335px, 100vw" %}
+    {% img heroImage, "object-cover w-full h-full", title, "(min-width: 768px) 335px, 100vw" %}
   </div>
 
   <!-- Text Content of the Project
@@ -41,7 +41,7 @@
           {% for item in galleryImages %}
           
             <li class="overflow-hidden transition-all rounded-md cursor-pointer aspect-w-3 aspect-h-2 hover:ring-amber-500 ring-2 ring-transparent hover:-translate-y-0.5" @click="showModal = ! showModal, $nextTick(() => { console.log('initiateSpliceGallery'), startSplide({{loop.index0}}) })">
-              {% imageNewsGallery item.image, "w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+              {% img item.image, "w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
             </li>
         
           {% endfor %}
@@ -66,7 +66,7 @@
               {% for item in galleryImages %}          
               <li class=" splide__slide">
                 <div class="splide__slide__container">
-                  {% imageNewsGallery item.image, "w-full h-full object-contain", item.alt, "95vw" %}
+                  {% img item.image, "w-full h-full object-contain", item.alt, "95vw" %}
                 </div>
               </li>          
               {% endfor %}
@@ -80,7 +80,7 @@
             <ul class="!mx-auto  splide__list">
               {% for item in galleryImages %}
                 <li class="splide__slide">
-                  {% imageNewsGallery item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "100px" %}
+                  {% img item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "100px" %}
                 </li>
               {% endfor %}
             </ul>

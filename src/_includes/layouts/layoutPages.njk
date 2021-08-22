@@ -1,5 +1,6 @@
 ---
-layout: layouts/default.njk ### Substitute for {% extends "src/_includes/default.njk" %}
+layout: layouts/default.njk 
+### Substitute for {% extends "src/_includes/default.njk" %}
 ---
 
 {% block content %}
@@ -12,7 +13,7 @@ layout: layouts/default.njk ### Substitute for {% extends "src/_includes/default
   {% if galleryImages %}
   <div class="grid grid-cols-3 gap-0.5 grid-flow-row-dense">
     {% for item in galleryImages %}
-      {% imageNewsGallery item.image, item.alt, "(min-width: 1080px) 360px, 33.33vw" %}       
+      {% img item.image, item.alt, "(min-width: 1080px) 360px, 33.33vw" %}       
     {% endfor %} 
   </div>
   {% endif %}

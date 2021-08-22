@@ -33,7 +33,7 @@ eleventyNavigation:
 
       <a href="{{item.url}}" class="grid grid-cols-3 gap-2 lg:block">
         <div class="col-span-1 lg:aspect-w-3 lg:aspect-h-2">
-        {% imageNewsGallery item.data.heroImage, "w-full h-full object-cover", item.data.title, "(min-width: 768px) 320px, 120px" %}         
+        {% img item.data.heroImage, "w-full h-full object-cover", item.data.title, "(min-width: 768px) 320px, 120px" %}         
         </div>
 
         <div class="col-span-2 px-4 my-6 lg:mb-0">
