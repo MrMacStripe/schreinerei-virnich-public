@@ -1,6 +1,3 @@
-{# ---
-url: https://virnich-11ty.netlify.app
---- #}
 <!doctype html>
 <html lang="{{language or site.language}}" class="smooth-scroll">
   
@@ -35,10 +32,10 @@ url: https://virnich-11ty.netlify.app
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" /> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'"/> 
     
-        {# Stylesheet - tailwindcss #}
+    {# Stylesheet - tailwindcss #}
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
 
-    {# Import Alpine & Swiper #} 
+    {# Import Main JS #} 
     <script type="module" src="/main.js?v={% version %}" defer></script> 
   
     {# Add local dependencies to head #}
