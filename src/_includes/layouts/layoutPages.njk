@@ -5,19 +5,21 @@ layout: layouts/default.njk
 
 {% block content %}
 
-<div class="max-w-screen-md px-4 py-12 mx-auto prose lg:py-8 lg:prose-lg">
+  <div class="px-4 py-12 mx-auto max-w-default lg:py-8 ">
+    <div class="prose-sm prose max-w-prose sm:prose lg:prose-lg">
 
-  <h1>{{title}}</h1>
-  <main>{{ content | safe }}</main>
+      <h1 class="break-words">{{title}}</h1>
+      <main>{{ content | safe }}</main>
 
-  {% if galleryImages %}
-  <div class="grid grid-cols-3 gap-0.5 grid-flow-row-dense">
-    {% for item in galleryImages %}
-      {% img item.image, item.alt, "(min-width: 1080px) 360px, 33.33vw" %}       
-    {% endfor %} 
+      {% if galleryImages %}
+        <div class="grid grid-cols-3 gap-0.5 grid-flow-row-dense">
+          {% for item in galleryImages %}
+            {% img item.image, item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+    </div>
   </div>
-  {% endif %}
 
-</div> 
- 
-{% endblock %} 
+{% endblock %}

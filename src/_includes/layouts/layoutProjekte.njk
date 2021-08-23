@@ -7,7 +7,7 @@
 
 <!-- Page Wrapper
 ==================================== -->
-<div class="relative max-w-[1080px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:py-20 py-8">
+<div class="relative max-w-[1080px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:py-20 py-8 md:gap-10">
   
   <!-- Main Image of the Project
   ==================================== -->
@@ -31,7 +31,7 @@
   ==================================== -->
   {% if galleryImages %}
 
-  <div class="col-span-1 md:col-span-3" x-data="{showModal:false }">
+  <div class="col-span-1 md:col-span-3" x-data="{showModal:false }" @keydown.escape="showModal=false">
     <div class="col-span-1 mt-20 max-w-default md:col-span-3 ">
 
       <h2 class="px-2 text-2xl font-bold border-b-2 border-amber-300">Bildergalerie</h2>
@@ -41,7 +41,7 @@
           {% for item in galleryImages %}
           
             <li class="overflow-hidden transition-all rounded-md cursor-pointer aspect-w-3 aspect-h-2 hover:ring-amber-500 ring-2 ring-transparent hover:-translate-y-0.5" @click="showModal = ! showModal, $nextTick(() => { console.log('initiateSpliceGallery'), startSplide({{loop.index0}}) })">
-              {% img item.image, "w-full h-full object-cover", item.alt, "(min-width: 1080px) 360px, 33.33vw" %}
+              {% img item.image, "w-full h-full object-cover", page.fileSlug, "(min-width: 1080px) 360px, 33.33vw" %}
             </li>
         
           {% endfor %}
@@ -57,7 +57,7 @@
       <div class="absolute z-10 w-12 h-12 text-xl font-black text-center rounded-full cursor-pointer text-amber-900 bg-amber-400 top-2 right-2 lg:top-12 lg:right-12 leading-[3rem]">X</div>
 
       <div class="p-2 lg:p-4 3xl:p-12" 
-      @click.outside="showModal = false, $nextTick(() => { console.log('destroySplideGallery'), destroySplide() })">
+       @click.outside="showModal = false, $nextTick(() => { console.log('destroySplideGallery'), destroySplide() })">
 
         <!-- Lightbox main Image, syncronised with the thumbnails -->
         <div id="primary-slider" class="splide">
@@ -66,7 +66,7 @@
               {% for item in galleryImages %}          
               <li class=" splide__slide">
                 <div class="splide__slide__container">
-                  {% img item.image, "w-full h-full object-contain", item.alt, "95vw" %}
+                  {% img item.image, "w-full h-full object-contain", page.fileSlug, "95vw" %}
                 </div>
               </li>          
               {% endfor %}
@@ -80,7 +80,7 @@
             <ul class="!mx-auto  splide__list">
               {% for item in galleryImages %}
                 <li class="splide__slide">
-                  {% img item.image, "rounded-sm cursor-pointer w-full h-full object-cover", item.alt, "100px" %}
+                  {% img item.image, "rounded-sm cursor-pointer w-full h-full object-cover",page.fileSlug, "100px" %}
                 </li>
               {% endfor %}
             </ul>

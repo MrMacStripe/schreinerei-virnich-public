@@ -1,4 +1,4 @@
-<section id="galerie" class="py-20">
+<section id="galerie" class="pt-8 pb-20">
   <header class="px-4 mx-auto">
     <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">Neueste Arbeiten</h2>
     <p class="mx-auto mt-2 text-lg text-gray-600 md:text-center max-w-prose">Verschiedene Arbeiten aus allen Bereichen unserer Produktpalette. Von der Konstuktion individueller Möbelstücke über den Einbau von Haustüren und Fenstern bis hin zur kompletten Messebaulösung</p>
@@ -9,7 +9,7 @@
 
   <div class="splide__track lg:!overflow-visible">
     <ul class="splide__list">
-    {% for item in collections.projekt %}
+    {% for item in collections.projekt | reverse() %}
 
       <li class="splide__slide">    
 
@@ -21,8 +21,14 @@
           </div>
           <!-- Project Information -->
           <div class="absolute bottom-0 px-4 pb-6 from-black bg-gradient-to-t">
-            <h2 class="text-xl font-bold text-amber-50">{{item.data.title}}</h2>
-            <p class="mt-2 text-sm text-gray-300">{{item.data.page.excerpt}}</p>
+            <h2 class="text-xl font-bold text-amber-50">{{item.data.title}}</h2>         
+
+            {% for item in item.data.tags | except('all','projekt','post','posts') %}
+            <span class="px-1 py-0.5 mb-2 text-[8px] font-normal transition-all  rounded-md mr-1 bg-amber-200 ">
+              {{item}}
+            </span>
+            {% endfor %}   
+            {# <p class="mt-2 text-sm text-gray-300">{{item.data.page.excerpt}}</p> #}
             <p class="mt-8 text-sm font-semibold group-hover:underline text-amber-500" >Projekt ansehen »</p>
           </div>
         </a>

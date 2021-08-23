@@ -49,10 +49,10 @@
     @apply !-mb-8;
   }
   .splide__arrow--prev{
-    @apply lg:-left-8 left-1;
+    @apply left-1;
   }
   .splide__arrow--next{
-    @apply lg:-right-8 right-1;
+    @apply right-1;
   }
   .splide__arrow{
     @apply bg-transparent rounded-none w-28 h-3/4 lg:w-10 lg:h-10 lg:bg-amber-400 lg:hover:bg-amber-700 lg:rounded-full ;

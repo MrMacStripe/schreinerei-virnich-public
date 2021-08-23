@@ -1,19 +1,15 @@
-<section id="hero" class="relative border-b-2 border-amber-900">
+<section id="hero" class="relative overflow-x-hidden border-b-2 border-amber-900">
 
   <div class="absolute inset-0 flex flex-wrap w-full h-full md:flex-none -z-1">
     <div class="w-full h-full md:w-7/12 bg-brown-100 bg-pattern-grid--dark"></div>
     <div class="flex-1 hidden w-full h-full md:block bg-brown-900"></div>
   </div>
 
-  <div class="grid max-w-screen-xl grid-cols-1 px-4 pt-8 mx-auto gap-y-16 gap-x-12 md:py-8 md:px-6 lg:px-8 md:grid-cols-2">
+  <div class="grid max-w-screen-xl grid-cols-1 px-4 pt-8 mx-auto gap-y-16 gap-x-12 md:py-8 md:grid-cols-2">
 
     <!-- Left column -->
-    {# Hallo transparent #}
-    {# <!-- ---> 
-    ABC
-     #}
     <div class="w-full max-w-screen-md md:py-16 md:pr-12">
-      {# <svg class="hidden w-10/12 mx-auto md:block md:ml-0" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 664 231">
+      {# <svg class="hidden w-1/3 mx-auto md:block md:ml-0" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 664 231"> 
         <g transform="translate(-204.989 -155.444)">
           <path fill="none" d="M204.989 155.444h663.469v230.248H204.989z"/>
           <clipPath id="a">
@@ -29,7 +25,7 @@
           </g>
         </g>
       </svg> #}
-      <div class="mt-6 md:mt-16">
+      <div class="mt-6">
         <h1 class="text-2xl font-black lg:text-4xl text-amber-900">{{site.companyName}}</h1>
         <h2 class="text-xl font-medium opacity-80">{{site.companyMotto}}</h2>
         <p class="mt-8 text-lg font-medium">{{site.companyDescription}}</p>
@@ -38,10 +34,25 @@
     </div>
 
     <!-- Right Column -->
-    <div class="pb-8 md:mx-auto md:p-0 md:w-full md:max-h-screen md:h-full">
-      <div class="relative aspect-w-3 aspect-h-2 md:p-0 md:h-full md:max-h-screen xl:-mr-48 2xl:-mr-64" >
-        {% img "./src/assets/images/hero.jpg", "object-cover w-full h-full rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}       
+    <div class="pb-8 md:mx-auto md:p-0 md:w-full">
+  
+      <div class="n max-h-[50vh] -mr-8 relative grid  md:max-h-[80vh] grid-cols-7 grid-rows-3 gap-1 md:gap-3 xl:-mr-24 2xl:-mr-48">        
+
+        {% img "./src/assets/images/abc.jpeg", "object-cover w-full h-full col-span-3 row-span-2 rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}     
+
+        {% img "./src/assets/images/hero.jpg", "object-cover w-full h-full col-span-2 row-span-3 rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}     
+
+        {% img "./src/assets/images/2020-kindergarten-konzen-1.jpeg", "col-span-2 row-span-1  object-cover w-full h-full  rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}     
+
+        {% img "./src/assets/images/gewerbliche-grossprojekte.jpg", "col-span-2 row-span-1 object-cover w-full h-full  rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}     
+
+        {% img "./src/assets/images/haustuer.jpeg", "object-cover w-full h-full col-span-3 row-span-1 rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}     
+
+        {% img "./src/assets/images/badezimmer.jpeg", "object-cover w-full h-full col-span-2 row-span-1 rounded-lg", "Hallo Text", "(min-width: 750px) 50vw, 90vw" %}  
+
+
       </div>
+
     </div>
   </div>
 

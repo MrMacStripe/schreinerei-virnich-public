@@ -9,26 +9,29 @@
   "features": [
     "Lieferung und Einbau aller Haustüren und Fenster", 
     "Türen im Innenbereich", 
-    "Spinde und Umkleidemöglichkeiten für die Kinder"
+    "Spinte und Umkleidemöglichkeiten für die Kinder"
   ],
     "customerName":"Kindergarten Konzen",
-    "customerPosition": "Giesela Stadtschnepfe",
+    "customerPosition": "Name Auftraggeber",
     "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
   },
-
- {
-  "headline":"Ankleide und Badezimmer", 
-  "excerpt":"Renovierung eines Schlaf- und Ankleidezimmers bei einem Privatkunden. De",
+  {
+  "headline":"Privates Ankleidezimmer", 
+  "excerpt":"Konstruktion und Einbau eines Ankleidezimmers mit angeschlossenem Badezimmer.",
   "images":[
-    "/assets/images/2020-kindergarten-konzen-1.jpeg",
-    "/assets/images/2020-kindergarten-konzen-1.jpeg"
+    "/assets/images/features/ankleide-3.jpeg",
+    "/assets/images/features/ankleide-2.jpeg",
+    "/assets/images/features/ankleide-1.jpeg",
+    "/assets/images/features/ankleide-5.jpeg",
+    "/assets/images/features/ankleide-4.jpeg"
   ],
   "features": [
-    "Lieferung und Einbau aller Haustüren und Fenster", 
-    "Innenausstattung "
+    "Einbauschränke Ankleidezimmer", 
+    "Einbauschrank Badezimmer", 
+    "Waschbecken-Untertische Badezimmer"
   ],
-  "customerName":"Kindergarten Konzen",
-  "customerPosition": "Auftraggeber Stadt",
-  "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
+    "customerName":"Privatperson",
+    "customerPosition": "Name Kunde",
+    "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
   }
 ]
