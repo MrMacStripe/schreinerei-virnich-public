@@ -59,10 +59,12 @@
           <div class="splide  primary-slider-{{loop.index}}">
             <div class="splide__track">
               <ul class="splide__list">
-                {% for item in item.images %}
+                
+                {% for image in item.images %}
+                
                   <li class="splide__slide">
-                    <div class="aspect-w-4 aspect-h-3 ">
-                      <img class="object-cover w-full h-full overflow-hidden rounded-lg" src="{{item}}" alt="Ein Bild"/>
+                    <div class="aspect-w-4 aspect-h-3 ">                
+                      {% img image, "object-cover w-full h-full overflow-hidden rounded-lg", item.headline, "(min-width:768px) 530px, 90vw", "lazy"  %}
                     </div>
                   </li>
                   {%endfor%}
@@ -72,11 +74,12 @@
           <div class="mt-1 splide secondary-slider-{{loop.index}}">
             <div class="splide__track">
               <ul class="splide__list">
-              {% for item in item.images %}
+              {% for image in item.images %}
                 <li class="splide__slide">
-                <div class="aspect-w-4 aspect-h-3">
-                  <img class="object-cover w-full h-full overflow-hidden rounded-md" src="{{item}}" alt="Ein Bild"/>
+                <div class="aspect-w-4 aspect-h-3">                  
+                  {% img image, "object-cover w-full h-full overflow-hidden rounded-md", item.headline, "120px" %}
                   </div>
+                 
                 </li>
                 {%endfor%}           
               </ul>

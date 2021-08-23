@@ -3,8 +3,8 @@
   "headline":"Neubau Kindergarten Konzen", 
   "excerpt":"Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.",
   "images":[
-    "/assets/images/2020-kindergarten-konzen-1.jpeg",
-    "/assets/images/2020-kindergarten-konzen-1.jpeg"
+    "src/assets/images/2020-kindergarten-konzen-1.jpeg",
+    "src/assets/images/2020-kindergarten-konzen-1.jpeg"
   ],
   "features": [
     "Lieferung und Einbau aller Haustüren und Fenster", 
@@ -19,11 +19,11 @@
   "headline":"Privates Ankleidezimmer", 
   "excerpt":"Konstruktion und Einbau eines Ankleidezimmers mit angeschlossenem Badezimmer.",
   "images":[
-    "/assets/images/features/ankleide-3.jpeg",
-    "/assets/images/features/ankleide-2.jpeg",
-    "/assets/images/features/ankleide-1.jpeg",
-    "/assets/images/features/ankleide-5.jpeg",
-    "/assets/images/features/ankleide-4.jpeg"
+    "src/assets/images/features/ankleide-3.jpeg",
+    "src/assets/images/features/ankleide-2.jpeg",
+    "src/assets/images/features/ankleide-1.jpeg",
+    "src/assets/images/features/ankleide-5.jpeg",
+    "src/assets/images/features/ankleide-4.jpeg"
   ],
   "features": [
     "Einbauschränke Ankleidezimmer", 
