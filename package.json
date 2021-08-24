@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx rimraf _site .cache & concurrently \"npm run tailwind\" \"npx eleventy --serve\" ",
-    "build": "npx rimraf _site .cache & npm run tailwind-production & npm run 11ty-production ",
+    "dev": "npx rimraf _site .cache & concurrently \"npm run tailwind\" \"npx @11ty/eleventy --serve\" ",
+    "build": "npx rimraf _site .cache & npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify & npx @11ty/eleventy",
     "tailwind": "npx tailwindcss -i ./src/tailwind.css  -o ./_site/style.css --watch",
-    "tailwind-production": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify",
-    "11ty-production": "cross-env ELEVENTY_PRODUCTION=true npx eleventy",
-    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx eleventy"
+    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "Maurice Stuffer - Webscription",
