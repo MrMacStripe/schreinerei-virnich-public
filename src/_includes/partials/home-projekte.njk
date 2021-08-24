@@ -58,31 +58,31 @@
         <div class="flex-auto w-full md:flex-1 ">
           <div class="splide  primary-slider-{{loop.index}}">
             <div class="splide__track">
-              <ul class="splide__list">
+              <div class="splide__list">
                 
                 {% for image in item.images %}
                 
-                  <li class="splide__slide">
+                  <div class="splide__slide">
                     <div class="aspect-w-4 aspect-h-3 ">                
                       {% img image, "object-cover w-full h-full overflow-hidden rounded-lg", item.headline, "(min-width:768px) 530px, 90vw", "lazy"  %}
                     </div>
-                  </li>
+                  </div>
                   {%endfor%}
-              </ul>
+              </div>
             </div>
           </div>
           <div class="mt-1 splide secondary-slider-{{loop.index}}">
             <div class="splide__track">
-              <ul class="splide__list">
+              <div class="splide__list">
               {% for image in item.images %}
-                <li class="splide__slide">
+                <div class="splide__slide">
                 <div class="aspect-w-4 aspect-h-3">                  
                   {% img image, "object-cover w-full h-full overflow-hidden rounded-md", item.headline, "(min-width:768px)90px, 62px", "lazy" %}
                   </div>
                  
-                </li>
+                </div>
                 {%endfor%}           
-              </ul>
+              </div>
             </div>
           </div>
         </div>
