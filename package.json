@@ -9,7 +9,7 @@
     "tailwind": "npx tailwindcss -i ./src/tailwind.css  -o ./_site/style.css --watch",
     "tailwind-production": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify",
     "11ty-production": "cross-env ELEVENTY_PRODUCTION=true npx eleventy",
-    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx ELEVENTY_PRODUCTION=true eleventy"
+    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx eleventy"
   },
   "keywords": [],
   "author": "Maurice Stuffer - Webscription",
