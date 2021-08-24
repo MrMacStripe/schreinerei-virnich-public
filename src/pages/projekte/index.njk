@@ -45,9 +45,9 @@ permalink: /projekte/
 
           <h2 class="text-base font-bold md:text-2xl ">{{ item.data.title }}</h2>
 
-          <p class="mt-2 text-sm text-gray-600 md:text-base">
-          {{item.data.page.excerpt}}
-          </p>
+          {# <p class="mt-2 text-sm text-gray-600 md:text-base">
+          {{ item.content | safe() }}
+          </p> #}
 
           <p class="py-1 pr-2 mt-4 font-semibold lg:px-2 lg:absolute lg:mt-0 text-amber-500 bottom-4 group-hover:underline">
           Projekt ansehen »
