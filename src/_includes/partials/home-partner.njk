@@ -7,21 +7,12 @@
 
   <div class="px-4 mx-auto mt-12 max-w-default">
    <div class="grid grid-cols-2 gap-3 mx-auto mt-8 md:grid-cols-3">
-      {% macro partner(name, image) %}
+      {% for item in partner %}
       <div class="w-full p-8 bg-opacity-50 border rounded-md h-28 border-opacity-10 border-amber-500 bg-brown-100">
-        <img class="object-contain w-full h-full" src="{{image}}" alt="{{name}}" loading="lazy"/>
+      {% picture item.image, "object-contain w-full h-full","{{item.name}}", "(min-width:768px)276px, 45vw", "lazy" %}
       </div>
-      {% endmacro %}
- 
-      {{ partner("Holz Scherf", "/assets/partner/logo-scherf.png")}}
-      {{ partner("EGE Fensterbau", "/assets/partner/logo-ege.svg")}}
-      {{ partner("Glas Porschen", "/assets/partner/porschen.png")}}
-      {{ partner("Koch Fensterbau", "/assets/partner/koch.png")}}
-      {{ partner("Rickert & Schmelter", "/assets/partner/rickert-schmelter.png")}}
-      {{ partner("Nüssing", "/assets/partner/nuessing.svg")}}
-      {{ partner("Häfele", "/assets/partner/haefele.png")}}
-      {{ partner("Würth", "/assets/partner/wuerth.svg")}}
-          
+      {% endfor %}
+           
     </div>
   </div>
 </section>

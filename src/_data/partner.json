@@ -1,0 +1,10 @@
+[
+  {"name":"Holz Scherf", "image":"src/assets/partner/logo-scherf.png"},
+  {"name":"EGE Fensterbau", "image":"src/assets/partner/logo-ege.svg"},
+  {"name":"Glas Porschen", "image":"src/assets/partner/porschen.png"},
+  {"name":"Koch Fensterbau", "image":"src/assets/partner/koch.png"},
+  {"name":"Rickert & Schmelter", "image":"src/assets/partner/rickert-schmelter.png"},
+  {"name":"Nüssing", "image":"src/assets/partner/nuessing.svg"},
+  {"name":"Häfele", "image":"src/assets/partner/haefele.png"},
+  {"name":"Würth", "image":"src/assets/partner/wuerth.svg"}
+]

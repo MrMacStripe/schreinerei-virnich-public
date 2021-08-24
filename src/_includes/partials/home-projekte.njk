@@ -1,4 +1,4 @@
-<section id="projekte" class="py-20 my-8 bg-opacity-50 border-t-2 border-b-2 lg:my-12 bg-brown-100 border-brown-900">
+<section id="projekte" class="py-20 my-8 overflow-x-hidden bg-opacity-50 border-t-2 border-b-2 lg:my-12 bg-brown-100 border-brown-900">
   <header class="px-4 mx-auto">
     <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl md:text-center">
     Referenzprojekte & Kundenstimmen
@@ -77,7 +77,7 @@
               {% for image in item.images %}
                 <li class="splide__slide">
                 <div class="aspect-w-4 aspect-h-3">                  
-                  {% img image, "object-cover w-full h-full overflow-hidden rounded-md", item.headline, "120px" %}
+                  {% img image, "object-cover w-full h-full overflow-hidden rounded-md", item.headline, "(min-width:768px)90px, 62px", "lazy" %}
                   </div>
                  
                 </li>
@@ -105,7 +105,7 @@
       isNavigation: true,
       focus: 'center',
       breakpoints: {
-        '600': {
+        '768': {
           fixedWidth: 66,
           gap:4
         }
@@ -116,7 +116,6 @@
       type: 'fade',
       width: '100%',
       pagination: false,
-      lazyLoad: "nearby",
       arrows: false,
       cover: true
     }); // do not call mount() here.

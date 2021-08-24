@@ -1,14 +1,14 @@
-<section id="hero" class="relative overflow-x-hidden border-b-2 border-amber-900">
+<section id="hero" class="relative overflow-x-hidden ">
 
-  <div class="absolute inset-0 flex flex-wrap w-full h-full md:flex-none -z-1">
-    <div class="w-full h-full md:w-7/12 bg-brown-100 bg-pattern-grid--dark"></div>
-    <div class="flex-1 hidden w-full h-full md:block bg-brown-900"></div>
+  <div class="absolute inset-0 grid w-full h-full grid-cols-1 md:grid-cols-5 -z-1 border-b-[3px] border-amber-900">
+    <div class="w-full h-full col-span-1 md:col-span-3 bg-brown-100 bg-pattern-grid--dark"></div>
+    <div class="hidden w-full h-full md:block md:col-span-2 bg-brown-900"></div>
   </div>
 
-  <div class="grid max-w-screen-xl grid-cols-1 px-4 pt-8 mx-auto gap-y-16 gap-x-12 md:py-8 md:grid-cols-2">
+  <div class="grid max-w-screen-xl grid-cols-1 px-4 pt-8 mx-auto place-items-center gap-y-16 gap-x-10 md:py-8 md:grid-cols-2 lg:pt-20 lg:pb-24">
 
     <!-- Left column -->
-    <div class="w-full max-w-screen-md md:py-16 md:pr-12">
+    <div class="w-full max-w-screen-md md:pb-16">
       {# <svg class="hidden w-1/3 mx-auto md:block md:ml-0" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 664 231"> 
         <g transform="translate(-204.989 -155.444)">
           <path fill="none" d="M204.989 155.444h663.469v230.248H204.989z"/>
@@ -34,21 +34,21 @@
     </div>
 
     <!-- Right Column -->
-    <div class="pb-8 md:mx-auto md:p-0 md:w-full">
+    <div class="pb-8 lg:mx-auto lg:p-0 lg:w-full">
   
-      <div class="n max-h-[50vh] -mr-8 relative grid  md:max-h-[80vh] grid-cols-7 grid-rows-3 gap-1 md:gap-3 xl:-mr-24 2xl:-mr-48">        
+      <div class="n max-h-[50vh] -mr-8 relative grid lg:max-h-[80vh] grid-cols-7 grid-rows-3 gap-1 md:gap-3 xl:-mr-24 2xl:-mr-48">        
 
-        {% img "./src/assets/images/abc.jpeg", "object-cover w-full h-full col-span-3 row-span-2 rounded-lg", "Hallo Text", "480px", "eager" %}     
+        {% img "./src/assets/images/abc.jpeg", "object-cover w-full h-full col-span-3 row-span-2 rounded-lg", "Beispielbild Fensterbau: Einbau von großen Fenstern und Schiebeelementen", "(min-width:768px)480px, 30vw", "eager" %}     
 
-        {% img "./src/assets/images/hero.jpg", "object-cover w-full h-full col-span-2 row-span-3 rounded-lg", "Hallo Text", "480px", "eager" %}     
+        {% img "./src/assets/images/hero.jpg", "object-cover w-full h-full col-span-2 row-span-3 rounded-lg", "Beispielbild Haustüren: Eingebaute individuelle Haustüre", "(min-width:768px)480px, 30vw", "eager" %}     
 
-        {% img "./src/assets/images/2020-kindergarten-konzen-1.jpeg", "col-span-2 row-span-1  object-cover w-full h-full  rounded-lg", "Hallo Text", "320px", "eager" %}     
+        {% img "./src/assets/images/2020-kindergarten-konzen-1.jpeg", "col-span-2 row-span-1  object-cover w-full h-full  rounded-lg", "Beispielbild Treppenbau: Eingebaute freischwebende Treppe", "(min-width:768px)320px, 30vw", "eager" %}     
 
-        {% img "./src/assets/images/gewerbliche-grossprojekte.jpg", "col-span-2 row-span-1 object-cover w-full h-full  rounded-lg", "Hallo Text", "320px", "eager" %}     
+        {% img "./src/assets/images/gewerbliche-grossprojekte.jpg", "col-span-2 row-span-1 object-cover w-full h-full  rounded-lg", "Beispielbild privater Möbelbau: Sitzecke", "(min-width:768px)320px, 30vw", "eager" %}     
 
-        {% img "./src/assets/images/haustuer.jpeg", "object-cover w-full h-full col-span-3 row-span-1 rounded-lg", "Hallo Text", "320px", "eager" %}     
+        {% img "./src/assets/images/haustuer.jpeg", "object-cover w-full h-full col-span-3 row-span-1 rounded-lg", "Beispielbild gewerblicher Möbelbau: Hotelzimmer Bad", "(min-width:768px)320px, 30vw", "eager" %}     
 
-        {% img "./src/assets/images/badezimmer.jpeg", "object-cover w-full h-full col-span-2 row-span-1 rounded-lg", "Hallo Text", "320px", "eager" %}  
+        {% img "./src/assets/images/badezimmer.jpeg", "object-cover w-full h-full col-span-2 row-span-1 rounded-lg", "Beispielbild privater Möbelbau: Ankleidezimmer + Bad", "(min-width:768px)320px, 30vw", "eager" %}  
 
 
       </div>
