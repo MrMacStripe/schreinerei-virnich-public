@@ -1,20 +1,24 @@
 [
   {
-  "headline":"Neubau Kindergarten Konzen", 
-  "excerpt":"Wir haben den Rohbau mit Fenstern und Türen ausgestattet. Bei der Inneneinrichtung durften wir Zimmer- & Brandschutztüren liefern.",
+  "headline":"Gestaltung Essecke Erker im Küchenbereich", 
+  "excerpt":"Möbelbauprojekt bei Privat",
   "images":[
-    "src/assets/images/2020-kindergarten-konzen-1.jpeg",
-    "src/assets/images/2020-kindergarten-konzen-1.jpeg"
+    "src/assets/images/arbeiten/sitzecke-1.jpeg",
+    "src/assets/images/arbeiten/sitzecke-2.jpeg",
+    "src/assets/images/arbeiten/sitzecke-3.jpeg",
+    "src/assets/images/arbeiten/sitzecke-4.jpeg"
   ],
   "features": [
-    "Lieferung und Einbau aller Haustüren und Fenster", 
-    "Türen im Innenbereich", 
-    "Spinte und Umkleidemöglichkeiten für die Kinder"
+    "Umlaufende Sitzbank aus weiß lackiertem MDF-Korpus mit wildeiche Sitz- und Abstellflächen", 
+    "Staufächer sowie Schubladen an der Stirnseite", 
+    "Individueller Tisch: Tischplatte aus Wildeiche",
+    "Tischgestell aus Stahl, vom Schlosser individuell gefertigt, schwarz pulverbeschichtet"
   ],
-    "customerName":"Kindergarten Konzen",
-    "customerPosition": "Name Auftraggeber",
-    "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
+    "customerName":"Privat",
+    "customerPosition": "Günter Virnich:",
+    "customerReview":"Die Vorgabe für diese Eckesse war eine optimale Ausnutzung der Räumlichkeiten. Wichtig waren Stauflächen, eine umlaufende Eckbank und ein Tisch in der Mitte."    
   },
+
   {
   "headline":"Privates Ankleidezimmer", 
   "excerpt":"Konstruktion und Einbau eines Ankleidezimmers mit angeschlossenem Badezimmer.",
@@ -32,6 +36,40 @@
   ],
     "customerName":"Privatperson",
     "customerPosition": "Name Kunde",
-    "customerReview":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."    
-  }
+    "customerReview":"Renovierung bei einem Privatkunden. Betonschicht auf Holz"    
+  },
+
+  {
+    "headline":"Neugestaltung Treppenhaus über zwei Etagen", 
+    "excerpt":"Renovierung & Treppenbau Privat",
+    "images":[
+      "src/assets/images/platzhalter-treppe.jpeg"
+    ],
+    "features": [
+      "Demonatage der alten, zweistöckigen Treppenkonstruktion inkl. alter Böden & Podesten", 
+      "Schwebe-Effekt untere Treppe mit Glasgeländer", 
+      "Material: Wildeiche, geölt", 
+      "Einbauschrank im Podest zur oberen Treppe zur Stauraumgewinnung, MDF-Konstruktion weiß lackiert"
+    ],
+      "customerName":"Privatperson",
+      "customerPosition": "Günter Virnich",
+      "customerReview":"Schmaler Flur mit verschiedenen Treppenformen und Hölzern in ein helles, modernes und geräumiges Treppenhaus umzuwandeln."    
+    }
+,
+  {
+    "headline":"Fenster & Türen für modernes Einfamilienhaus", 
+    "excerpt":"Renovierung & Treppenbau Privat",
+    "images":[
+      "src/assets/images/platzhalter-treppe.jpeg"
+    ],
+    "features": [
+      "Aluminiumfenster", 
+      "Aluminiumhaustür", 
+      "Dielenschrank", 
+      "asas"
+    ],
+      "customerName":"Privatperson",
+      "customerPosition": "Günter Virnich",
+      "customerReview":""    
+    }
 ]

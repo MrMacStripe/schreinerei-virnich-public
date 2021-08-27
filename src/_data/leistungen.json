@@ -39,13 +39,6 @@
     "link":"www.google.de", 
     "icon":"src/assets/images/gewerbliche-grossprojekte.jpg", 
     "description":"Kindergarteneinrichtung, Komissionierwagen, Garederoben für Kindergarten"
-  },
-
-  {
-    "headline":"Messebau", 
-    "link":"www.google.de", 
-    "icon":"src/assets/images/messebau.jpg", 
-    "description":"Theken, Ausstellungsstücke, Repräsentationsmöbel"
   }
 
 ]

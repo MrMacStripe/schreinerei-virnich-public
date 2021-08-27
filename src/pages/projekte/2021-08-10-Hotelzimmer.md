@@ -13,9 +13,9 @@ galleryImages:
   - image: src/assets/images/arbeiten/hotel-bad-4.jpeg
     alt: Badschrank
 --- 
-### Renovierung von Hotelzimmer-Bädern 
+### Renovierung von Restaurant WC-Anlage 
 
-Kunde: Hotel Roeb in Schmidt
+Kunde: Hotel
 - Spiegelschränke 
 - Waschtische
 - Scham-Wände

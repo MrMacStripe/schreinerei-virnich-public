@@ -5,13 +5,10 @@ layout: layouts/layoutProjekte.njk
 heroImage: src/assets/images/arbeiten/sitzecke-1.jpeg
 galleryImages:
   - image: src/assets/images/arbeiten/sitzecke-1.jpeg
-    alt: Sitzecke
-  - image: src/assets/images/arbeiten/sitzecke-2.jpeg
-    alt: Sitzecke
-  - image: src/assets/images/arbeiten/sitzecke-3.jpeg
-    alt: Sitzecke
+  - image: src/assets/images/arbeiten/sitzecke-2.jpeg    
+  - image: src/assets/images/arbeiten/sitzecke-3.jpeg    
   - image: src/assets/images/arbeiten/sitzecke-4.jpeg
-    alt: Sitzecke
+    
   
 --- 
 ### 
