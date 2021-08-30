@@ -92,6 +92,7 @@ module.exports = function (eleventyConfig) {
           height="${highsrc.height}"
           alt="${alt}"
           loading="${loading}"
+          title="${alt}"
           decoding="async" />
       </picture>`;
   }
@@ -123,6 +124,7 @@ module.exports = function (eleventyConfig) {
         height="${highsrc.height}"
         alt="${alt}"
         loading="${loading}"
+        title="${alt}"
         decoding="async" />`;
   }
 

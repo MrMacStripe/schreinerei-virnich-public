@@ -9,9 +9,9 @@
    <div class="grid grid-cols-2 gap-3 mx-auto mt-8 md:grid-cols-3">
       {% for item in partner %}
       <div class="w-full p-8 bg-opacity-50 border rounded-md h-28 border-opacity-10 border-amber-500 bg-brown-100">
-      {% picture item.image, "object-contain w-full h-full","{{item.name}}", "(min-width:768px)276px, 45vw", "lazy" %}
+      {% picture item.image, "object-contain w-full h-full",item.name, "(min-width:768px)276px, 45vw", "lazy" %}
       </div>
-      MERTENS Oberflächentechnik, Glasporschen -> Thermopor
+      
       {% endfor %}
            
     </div>

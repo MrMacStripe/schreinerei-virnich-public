@@ -6,5 +6,6 @@
   {"name":"Rickert & Schmelter", "image":"src/assets/partner/rickert-schmelter.png"},
   {"name":"Nüssing", "image":"src/assets/partner/nuessing.svg"},
   {"name":"Häfele", "image":"src/assets/partner/haefele.png"},
-  {"name":"Würth", "image":"src/assets/partner/wuerth.svg"}
+  {"name":"Würth", "image":"src/assets/partner/wuerth.svg"},
+  {"name":"Mertens Oberflächentechnik", "image":"src/assets/partner/mertens.png"}
 ]
