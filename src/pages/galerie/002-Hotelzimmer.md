@@ -1,5 +1,6 @@
 ---
 title: Waschtische & Spiegelschränke
+date: 2021-08-31
 tags: [projekt, Großprojekte, Möbelbau]
 layout: layouts/layoutProjekte.njk
 heroImage: src/assets/images/arbeiten/hotel-bad-2.jpeg

@@ -29,7 +29,7 @@
   
   "footerNav":[
     {"label":"Startseite","link":"/"},
-    {"label":"Projekte","link":"/projekte"},
+    {"label":"Galerie abgeschlossener Projekte","link":"/galerie"},
     {"label":"Datenschutzerklärung","link":"/datenschutz"},
     {"label":"Impressum","link":"/impressum"}
   ]

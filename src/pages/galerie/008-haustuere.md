@@ -1,14 +1,12 @@
 ---
 title: Haustüre
+date: 2021-08-10
 tags: [projekt, Haustür]
 layout: layouts/layoutProjekte.njk
 heroImage: src/assets/images/haustuer/2.jpeg
 galleryImages:
   - image: src/assets/images/haustuer/1.jpeg
   - image: src/assets/images/haustuer/2.jpeg
-  
-
-  
 --- 
 ### 
 Kunde: Privatperson

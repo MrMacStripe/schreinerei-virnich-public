@@ -9,7 +9,7 @@
 
   <div class="splide__track lg:!overflow-visible">
     <ul class="splide__list">
-    {% for item in collections.projekt | reverse() %}
+    {% for item in collections.projekt | reverse %}
 
       <li class="splide__slide">    
 
@@ -34,9 +34,11 @@
         </a>
       </li>
     {% endfor %}
-    </ul>
+    </ul>    
   </div>
+  
 </div> 
+<div class="max-w-default mx-auto px-4 my-6"><a class="inline-block px-2 py-2 mt-8 text-sm font-semibold border-2 rounded-lg bg-amber-400 border-amber-400 " href="/galerie">Alle Projekte in der Übersicht</a></div>
 
 </section> 
  
@@ -56,7 +58,7 @@ new Splide( '#splide',{
 			gap    : '1rem',
 		},
 		'480': {
-			perPage: 1,
+			perPage: 1.2,
 			gap    : '1rem',
 		},
 	}

@@ -1,5 +1,6 @@
 ---
 title: Fensterbank mit Sitz- und Staumöglichkeiten
+date: 2021-08-20
 tags: [projekt, Möbelbau]
 layout: layouts/layoutProjekte.njk
 heroImage: src/assets/images/arbeiten/sitzbank-1.jpeg
@@ -7,8 +8,7 @@ galleryImages:
   - image: src/assets/images/arbeiten/sitzbank-1.jpeg
   - image: src/assets/images/arbeiten/sitzbank-2.jpeg
   - image: src/assets/images/arbeiten/sitzbank-3.jpeg
-  - image: src/assets/images/arbeiten/sitzbank-4.jpeg
-  
+  - image: src/assets/images/arbeiten/sitzbank-4.jpeg 
 --- 
 ### 
 Kunde: Privatperson

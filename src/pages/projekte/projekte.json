@@ -1,3 +1,0 @@
-{ 
-  "permalink": "projekte/{{ page.fileSlug  }}.html" 
-} 

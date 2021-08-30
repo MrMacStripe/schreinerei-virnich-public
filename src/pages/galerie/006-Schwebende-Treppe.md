@@ -9,7 +9,6 @@ galleryImages:
   - image: src/assets/images/arbeiten/treppe-schwebend-3.jpeg
   - image: src/assets/images/arbeiten/treppe-schwebend-4.jpeg
   - image: src/assets/images/arbeiten/treppe-schwebend-5.jpeg
-  
 --- 
 ### 
 Kunde: Privatperson

@@ -1,0 +1,3 @@
+{ 
+  "permalink": "galerie/{{ page.fileSlug  }}.html" 
+} 
