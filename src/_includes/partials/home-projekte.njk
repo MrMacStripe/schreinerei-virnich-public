@@ -67,7 +67,7 @@
                   <div class="splide__slide">
                     <div class="aspect-w-4 aspect-h-3 ">
                       <div class="object-contain w-full h-full">
-                      {% img image, "w-auto mx-auto h-full overflow-hidden rounded-lg", item.headline, "(min-width:768px) 530px, 90vw", "lazy"  %}
+                      {% picture image, "w-auto mx-auto h-full overflow-hidden rounded-lg", item.headline, "(min-width:768px) 530px, 90vw", "lazy"  %}
                       </div>             
                     </div>
                   </div>
@@ -81,7 +81,7 @@
               {% for image in item.images %}
                 <div class="splide__slide">
                 <div class="aspect-w-4 aspect-h-3">                  
-                  {% img image, "object-cover w-full h-full overflow-hidden rounded-md", item.headline, "(min-width:768px)90px, 62px", "lazy" %}
+                  {% picture image, "object-cover w-full h-full overflow-hidden rounded-md", item.headline, "(min-width:768px)90px, 62px", "lazy" %}
                   </div>
                  
                 </div>

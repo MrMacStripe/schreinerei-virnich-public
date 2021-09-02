@@ -1,0 +1,24 @@
+{
+   "image1": "./src/assets/images/home-hero-1.jpeg",
+   "desc1": "Beispielbild Fensterbau: Einbau von großen Fenstern und Schiebeelementen", 
+
+
+   "image2": "./src/assets/images/home-hero-3.jpeg",
+   "desc2": "Beispielbild Treppenbau: Eingebaute freischwebende Treppe", 
+   
+
+   "image3": "./src/assets/images/home-hero-2.jpeg",
+   "desc3": "Beispielbild Haustüren: Eingebaute individuelle Haustüre", 
+
+
+   "image4": "./src/assets/images/home-hero-4.jpeg",
+   "desc4": "Beispielbild privater Möbelbau: Sitzecke", 
+
+
+   "image5": "./src/assets/images/home-hero-5.jpeg",
+   "desc5": "Beispielbild gewerblicher Möbelbau: Hotelzimmer Bad", 
+
+   
+   "image6": "./src/assets/images/home-hero-6.jpeg",
+   "desc6": "Beispielbild privater Möbelbau: Ankleidezimmer + Bad"
+}
