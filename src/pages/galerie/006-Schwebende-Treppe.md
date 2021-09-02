@@ -15,7 +15,7 @@ Kunde: Privatperson
 - Innentreppe mit modernem Design
 - Material: Wildeiche gebürstet
 - Oberfläche geölt
-- Die Stufen sind einseitig mit Metalkern in der Wand verankert
+- Die Stufen sind einseitig mit Metallkern in der Wand verankert
 - Sturz-Schutz mit Glaselementen
 
 ===

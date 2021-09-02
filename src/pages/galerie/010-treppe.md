@@ -1,7 +1,7 @@
 ---
 title: Freischwebende Treppe
 date: 2021-09-02
-tags: [projekt, Haustür]
+tags: [projekt, Treppe]
 layout: layouts/layoutProjekte.njk
 heroImage: src/assets/images/treppe-hoefen/1.jpeg
 galleryImages:
@@ -11,8 +11,8 @@ galleryImages:
 --- 
 ### 
 Kunde: Privatperson
-- individuelle Haustüre aus Holz
-- individuelles Garagentor im gleichen Stil
-- Tür und Tor außen anthrazit lackiert
-- innen glatte Oberfläche weiß lackiert
+- Innentreppe mit modernem Design, Stufen scheinen im Raum zu schweben
+- Material: Wildeiche lackiert mit Rohholz-Effektlack
+- Die Stufen sind einseitig mit Metallkern in der Wand verankert
+- Treppengeländer Galerie aus Glas 
 ===
