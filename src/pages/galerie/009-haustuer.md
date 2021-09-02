@@ -13,8 +13,8 @@ galleryImages:
 --- 
 ### 
 Kunde: Privatperson
-- individuelle Haustüre aus Holz-Rohling
-- individuelles Garagentor
+- individuelle Haustüre aus Holz
+- individuelles Garagentor im gleichen Stil
 - Tür und Tor außen anthrazit lackiert
 - innen glatte Oberfläche weiß lackiert
 ===
