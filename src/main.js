@@ -11,5 +11,5 @@ window.Splide = Splide
 Alpine.plugin(intersect)
 Alpine.plugin(persist)
 Alpine.plugin(trap)
-Alpine.start()
+Alpine.start() 
 
