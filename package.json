@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx rimraf _site .cache & concurrently \"npm run tailwind\" \"npx @11ty/eleventy --serve\" ",
+    "dev": "concurrently \"npm run tailwind\" \"npx @11ty/eleventy --serve\" ",
     "build": "npx rimraf _site .cache & npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify & npx @11ty/eleventy",
     "tailwind": "npx tailwindcss -i ./src/tailwind.css  -o ./_site/style.css --watch",
     "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx @11ty/eleventy --incremental"
@@ -15,22 +15,22 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
-    "alpinejs": "^3.2.3",
+    "alpinejs": "^3.3.1",
     "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.9"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.10.0",
-    "@alpinejs/intersect": "^3.2.3",
-    "@alpinejs/persist": "^3.2.3",
-    "@alpinejs/trap": "^3.2.3",
+    "@11ty/eleventy-img": "^1.0.0-beta.2",
+    "@alpinejs/intersect": "^3.3.1",
+    "@alpinejs/persist": "^3.3.1",
+    "@alpinejs/trap": "^3.3.1",
     "@splidejs/splide": "^2.4.21",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "animejs": "^3.2.1",
-    "esbuild": "^0.12.21"
+    "esbuild": "^0.12.25"
   }
 }

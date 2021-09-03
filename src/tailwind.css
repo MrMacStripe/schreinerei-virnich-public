@@ -61,4 +61,5 @@
   .splide__arrow svg{
     @apply w-8 h-8 p-2 rounded-full fill-current bg-amber-400 text-brown-900 lg:bg-transparent lg:p-0 lg:rounded-none lg:w-4 lg:h-4;
   } 
+
 }
