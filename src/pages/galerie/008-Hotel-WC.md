@@ -19,5 +19,5 @@ galleryImages:
 Kunde: Hotel
 - Spiegelschränke 
 - Waschtische
-- Scham-Wände
+- Schamwände aus Echtholz
 ===

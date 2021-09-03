@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
 
 
   /* === START, add Assets to the bundle === */ 
-  eleventyConfig.addPassthroughCopy("src/assets/meta");
+  eleventyConfig.addPassthroughCopy("src/assets");
   
   eleventyConfig.addWatchTarget('./src/tailwind.css')
   eleventyConfig.addWatchTarget('./src/main.js')
@@ -41,6 +41,8 @@ module.exports = function (eleventyConfig) {
   /* === START, add a list of tags === */
   // https://github.com/11ty/eleventy/issues/927
   eleventyConfig.addFilter("keys", obj => Object.keys(obj)); 
+  
+
   eleventyConfig.addFilter("except", (arr=[], ...values) => {
     const data = new Set(arr);
     for (const item of values) {

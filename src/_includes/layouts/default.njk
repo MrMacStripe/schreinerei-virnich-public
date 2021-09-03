@@ -18,12 +18,12 @@
 
     {# Meta Data and Twitter Card #}
     <meta name="description" content="{{ description or site.description }}"/>
+    <meta name="twitter:card" content="summary_large_image"></meta>
     <meta property="og:title" content="{{title or site.title}}" />
     <meta property="og:url" content="{{ site.url+page.url }}" />
     <meta property="og:description" content="{{ description or site.description }}" />
-    <meta property="og:image" content="{{ site.url }}{{image or site.socialImage}}" />
+    <meta property="og:image" content="{{ site.url }}/{{heroImage|replace("src/","") or site.socialImage}}" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image"></meta>
   
     {# Favicons #} 
     {# Source: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
