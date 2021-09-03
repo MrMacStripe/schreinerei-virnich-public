@@ -1,7 +1,7 @@
 ---
 title: Freischwebende Treppe
 date: 2021-09-02
-tags: [projekt, Treppe]
+tags: [projekt, Treppen]
 layout: layouts/layoutProjekte.njk
 heroImage: src/assets/images/treppe-hoefen/1.jpeg
 galleryImages:

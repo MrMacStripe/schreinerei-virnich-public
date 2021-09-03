@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("img", img);
   /* === END, add different image shortcodes to the bundle === */ 
 
-
+  eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd.LL.yyyy");
   });

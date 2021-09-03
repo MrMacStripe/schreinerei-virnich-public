@@ -3,7 +3,12 @@
   
   <head> 
   
-    <title>{{title +" - "+ site.name}}</title>
+    <title>{% if title %}
+    {{title +" - "+ site.name}}
+    {% else %}
+    {{site.name}}
+    {% endif %}
+    </title>
     <link rel="canonical" href="{{ site.url + page.url }}" />
      
     {# Default meta tags #}  
