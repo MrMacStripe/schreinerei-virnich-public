@@ -1,7 +1,7 @@
 [
   {
     "name": "Günter Virnich", 
-    "education": "Tischler-Meister",
+    "education": "Tischlermeister",
     "position": "Chef",
     "image":"src/assets/images/team/virnich-guenter.jpg"
   },
@@ -13,37 +13,37 @@
   },
   {
     "name": "Ardalan Saberi", 
-    "education": "Tischler-Geselle",
+    "education": "Tischlergeselle",
     "position": "Möbelbau",
     "image":"src/assets/images/team/saberi-ardalan.jpg"
   },
   {
     "name": "Florian Witt", 
-    "education": "Tischler-Geselle",
+    "education": "Tischlergeselle",
     "position": "Fenster- & Türenmontage",
     "image":"src/assets/images/team/witt-florian.jpg"
   },
   {
     "name": "Rafael Schönewald", 
-    "education": "Tischler-Meister",
+    "education": "Tischlermeister",
     "position": "Haustüren & Treppen, Aufmaße",
     "image":"src/assets/images/team/schoenewald-rafael.jpg"
   },
   {
     "name": "Dirk Stollenwerk", 
-    "education": "Tischler-Meister",
+    "education": "Tischlermeister",
     "position": "Treppen, Möbel, Haustüren",
     "image":"src/assets/images/team/stollenwerk-dirk.jpg"
   },
   {
     "name": "Jonas Stange", 
-    "education": "Tischler-Geselle",
+    "education": "Tischlergeselle",
     "position": "Fenster- & Türenmontage",
     "image":"src/assets/images/team/stange-jonas.jpg"
   },
   {
     "name": "Simon Dick", 
-    "education": "Tischler-Geselle",
+    "education": "Tischlergeselle",
     "position": "Fenster- & Türenmontage",
     "image":"src/assets/images/team/dick-simon.jpg"
   },
