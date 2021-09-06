@@ -22,7 +22,7 @@
     <meta property="og:title" content="{{title or site.title}}" />
     <meta property="og:url" content="{{ site.url+page.url }}" />
     <meta property="og:description" content="{{ description or site.description }}" />
-    <meta property="og:image" content="{{ site.url }}/{{heroImage|replace("src/","") or site.socialImage}}" />
+    <meta property="og:image" content="{{ site.url }}/{{heroImage|replace("src/","")|replace(".","-640w.") or site.socialImage}}" />
     <meta property="og:type" content="website" />
   
     {# Favicons #} 
