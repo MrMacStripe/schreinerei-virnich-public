@@ -79,7 +79,7 @@ module.exports = function (eleventyConfig) {
     const folders = path.dirname(src).replace("src/assets/","")
     let metadata = await Image(src, {
       
-      widths: [160,600,768,120,null],
+      widths: [160,320,768,1200,null],
       formats: ['webp', 'jpeg'],
       urlPath: "/assets/"+folders,
       outputDir: "./_site/assets/"+folders,
@@ -119,7 +119,7 @@ module.exports = function (eleventyConfig) {
 
     const folders = path.dirname(src).replace("src/assets/","")
     let metadata = await Image(src, {
-      widths: [160,600,768,120,null],
+      widths: [160,320,768,1200,null],
       formats: ["jpeg"],
       urlPath: "/assets/"+folders,
       outputDir: "./_site/assets/"+folders,
