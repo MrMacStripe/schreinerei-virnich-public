@@ -1,56 +1,56 @@
 [
   {
-    "name": "Günter Virnich", 
+    "name": "Günter Virnich",
     "education": "Tischlermeister",
     "position": "Chef",
-    "image":"src/assets/images/team/virnich-guenter.jpg"
+    "image": "src/assets/images/team/virnich-guenter.jpg"
   },
   {
-    "name": "Gabi Virnich", 
-    
+    "name": "Gabi Virnich",
+
     "position": "Büro",
-    "image":"src/assets/images/team/virnich-gabi.jpg"
+    "image": "src/assets/images/team/virnich-gabi.jpg"
   },
   {
-    "name": "Ardalan Saberi", 
+    "name": "Ardalan Saberi",
     "education": "Tischlergeselle",
-    "position": "Möbelbau",
-    "image":"src/assets/images/team/saberi-ardalan.jpg"
+    "position": "Treppen- & Möbelbau",
+    "image": "src/assets/images/team/saberi-ardalan.jpg"
   },
   {
-    "name": "Florian Witt", 
+    "name": "Florian Witt",
     "education": "Tischlergeselle",
-    "position": "Fenster- & Türenmontage",
-    "image":"src/assets/images/team/witt-florian.jpg"
+    "position": "Fenster & Türen",
+    "image": "src/assets/images/team/witt-florian.jpg"
   },
   {
-    "name": "Raphael Schönewald", 
+    "name": "Raphael Schönewald",
     "education": "Tischlermeister",
     "position": "Haustüren & Treppen, Aufmaße",
-    "image":"src/assets/images/team/schoenewald-rafael.jpg"
+    "image": "src/assets/images/team/schoenewald-rafael.jpg"
   },
   {
-    "name": "Dirk Stollenwerk", 
+    "name": "Dirk Stollenwerk",
     "education": "Tischlermeister",
     "position": "Treppen, Möbel, Haustüren",
-    "image":"src/assets/images/team/stollenwerk-dirk.jpg"
+    "image": "src/assets/images/team/stollenwerk-dirk.jpg"
   },
   {
-    "name": "Jonas Stange", 
+    "name": "Jonas Stange",
+    "education": "Tischlergeselle",
+    "position": "Fenster & Türen",
+    "image": "src/assets/images/team/stange-jonas.jpg"
+  },
+  {
+    "name": "Simon Dick",
     "education": "Tischlergeselle",
     "position": "Fenster- & Türenmontage",
-    "image":"src/assets/images/team/stange-jonas.jpg"
+    "image": "src/assets/images/team/dick-simon.jpg"
   },
   {
-    "name": "Simon Dick", 
-    "education": "Tischlergeselle",
-    "position": "Fenster- & Türenmontage",
-    "image":"src/assets/images/team/dick-simon.jpg"
-  },
-  {
-    "name": "Mehdi Naderi", 
+    "name": "Mehdi Naderi",
     "education": "",
     "position": "Möbelbau, Oberflächen",
-    "image":"src/assets/images/team/naderi-mehdi.jpg"
+    "image": "src/assets/images/team/naderi-mehdi.jpg"
   }
 ]
