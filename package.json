@@ -8,7 +8,8 @@
     "build": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify & npx @11ty/eleventy --incremental",
     "cleanBuild": "npx rimraf _site .cache & npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify & npx @11ty/eleventy",
     "tailwind": "npx tailwindcss -i ./src/tailwind.css  -o ./_site/style.css --watch",
-    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx @11ty/eleventy --incremental"
+    "netlify": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx @11ty/eleventy --incremental",
+    "stage": "npx tailwindcss -i ./src/tailwind.css -o ./_site/style.css --minify && npx @11ty/eleventy --incremental && ftp-deploy --server w00ca0bd.kasserver.com --username f0164ae0 --password T9ttWucajPpsa2BZeNEZ --local-dir ./_site/ --server-dir ./stage/ --timeout 60000"
   },
   "keywords": [],
   "author": "Maurice Stuffer - Webscription",
@@ -26,6 +27,7 @@
     "@alpinejs/intersect": "^3.3.1",
     "@alpinejs/persist": "^3.3.1",
     "@alpinejs/trap": "^3.3.1",
+    "@samkirkland/ftp-deploy": "^1.2.3",
     "@splidejs/splide": "^2.4.21",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
