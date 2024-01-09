@@ -29,8 +29,8 @@ if (array_key_exists('email', $_POST)) {
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
-    $mail->setFrom('schreinereivirnich@mauricestuffer.com', 'Kontaktformular Schreinerei Virnich');
-    $mail->addAddress('schreinereivirnich@mauricestuffer.com', 'Kontaktformular Schreinerei Virnich');
+    $mail->setFrom('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
+    $mail->addAddress('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
     $mail->addBCC('schreinereivirnich@mauricestuffer.com', 'Kontaktformular Schreinerei Virnich');
     $mail->addBCC($_POST['email'], $_POST['name']);
 
@@ -39,14 +39,14 @@ if (array_key_exists('email', $_POST)) {
     //This will fail if the address provided is invalid,
     //in which case we should ignore the whole request
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-        $mail->Subject = 'Kontaktformular schreinerei-virnich.de';
+        $mail->Subject = 'Kontaktformular Schreinerei Virnich';
 
         //Keep it simple - don't use HTML
         $mail->isHTML(true);
         //Build a simple message body
-        $mail->Body = '<div style="line-height:1.25; color:#555555;"><h2>Kontaktformular schreinerei-virnich.de</h2><p>Hallo '. $_POST['name'].  '<p>Vielen Dank für Ihre Kontaktaufnahme!<br>Wir melden uns schnellstmöglich zurück.</p>
+        $mail->Body = '<div style="line-height:1.25; color:#555555;"><h2>Kontaktformular Schreinerei Virnich</h2><p>Hallo '. $_POST['name'].  '<p>Vielen Dank für Ihre Kontaktaufnahme!<br>Wir melden uns schnellstmöglich zurück.</p>
         <p><strong>Ihre Daten</strong><br>
-        Sie haben mir folgende Informationen übermittelt:</p>
+        Sie haben uns folgende Informationen übermittelt:</p>
         <br>Name: ' . $_POST['name'] . '<br>Email:  ' . $_POST['email'] . '<br>Firma:  ' . $_POST['company'] . '<br>Telefon:  ' . $_POST['phone']. '<br>Nachricht:  ' . $_POST['message'].'<br><br>
         ---<br>
         Hinweis: Dies ist eine automatisierte Antwort.</p></div>';
@@ -63,7 +63,7 @@ if (array_key_exists('email', $_POST)) {
 
         } else {
             $msg = 'Nachricht versendet! Eine Kopie wurde an Ihre E-Mail-Adresse versendet';
-            $newURL = 'https://schreinerei-virnich.de/kontakt-erfolgreich/';
+            $newURL = 'https://schreinerei-virnich.de/nachricht-versendet/';
             header('Location: ' . $newURL);
         }
     } else {
