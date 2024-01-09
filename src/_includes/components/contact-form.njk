@@ -1,27 +1,46 @@
 <form
     name="contact"
     method="POST"
-    action="/nachricht-versendet/"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
+    action="/sendcontactform.php"
     class="grid w-full grid-cols-1 text-gray-600 transition-all">
 
-      <input type="hidden" name="form-name" value="contact" />
-      <p class="hidden">
-        <label>Don’t fill this out: <input name="bot-field" /></label>
-      </p>
+        <!-- Create fields for the honeypot -->
+        <input
+          name="name-of-person"
+          type="text"
+          id="name-of-person"
+          class="hidden"
+        />
+        <!-- honeypot fields end -->
 
       <label class="text-sm font-medium" for="name">Name</label>
-      <input class="contact-input " type="text" name="name" id="name" />
+      <input class="contact-input " name="name"
+                id="name"
+                required
+                autocomplete="full-name"
+                required
+                type="text" />
 
       <label class="mt-6 text-sm font-medium" for="email">E-Mail-Adresse</label>
-      <input class="contact-input" type="email" name="email" id="email" />
+      <input class="contact-input"                 id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                type="text"/>
 
       <label class="mt-6 text-sm font-medium" for="phone">Telefonnummer</label>
-      <input class="contact-input" type="phone" name="phone" id="phone" />
+      <input class="contact-input"  type="text"
+                name="phone"
+                id="phone"
+                autocomplete="tel"
+                aria-describedby="phone-description" />
 
       <label class="mt-6 text-sm font-medium" for="message">Ihre Nachricht</label>
-      <textarea class="contact-input" name="message" id="message" rows="3">
+      <textarea class="contact-input"  rows="4"
+                  id="message"
+                  name="message"
+                  aria-describedby="message input field">
       </textarea>
 
       <button class="inline-block px-3 py-3 mt-8 text-xs font-semibold leading-none transition-all border-2 border-transparent rounded-md cursor-pointer whitespace-nowrap justify-self-start bg-amber-400 hover:text-amber-200 focus:text-amber-200 hover:bg-amber-700 focus:bg-amber-700" type="submit" >Nachricht absenden</button>
