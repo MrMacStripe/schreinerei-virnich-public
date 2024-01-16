@@ -47,11 +47,11 @@ if (array_key_exists('email', $_POST)) {
     //and will cause your messages to fail SPF checks
     $mail->setFrom('kontakt@schreinerei-virnich.de', 'Kontaktformular Schreinerei Virnich');
     // $mail->setFrom('kontakt@schreinerei-virnich.de', 'Kontaktformular Schreinerei Virnich');
-    $mail->addReplyTo('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
+    $mail->addReplyTo('schreinerei-virnich@t-online.de', 'Schreinerei Virnich');
     // $mail->addAddress('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
-    $mail->addAddress('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
+    $mail->addAddress('schreinerei-virnich@t-online.de', 'Schreinerei Virnich');
     $mail->addBCC('kontakt@schreinerei-virnich.de', 'Kontaktformular Schreinerei Virnich');
-    $mail->addBCC('m.stuffer@mauricestuffer.com', 'Kontaktformular Schreinerei Virnich');
+    $mail->addBCC('m.stuffer@mauricestuffer.com', 'Maurice Stuffer');
     $mail->addBCC($_POST['email'], $_POST['name']);
 
 
