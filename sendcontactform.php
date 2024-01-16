@@ -36,20 +36,22 @@ if (array_key_exists('email', $_POST)) {
 //SMTP::DEBUG_SERVER = client and server messages
     $mail->SMTPDebug = SMTP::DEBUG_OFF;   
     $mail->Host       = 'w00ca0bd.kasserver.com';                     //Set the SMTP server to send through
-    $mail->Username   = 'virnich@webscription.de';                     //SMTP username
-    $mail->Password   = '3YSwCGwBZDpoFAepk7oC ';                               //SMTP password
+    $mail->Username   = 'kontakt@schreinerei-virnich.de';                     //SMTP username
+    $mail->Password   = '3VsDoStsGREBQZJNGQWZ';                               //SMTP password
     $mail->Port = 25;
-    $mail->SMTPAuth = false;
+    $mail->SMTPAuth = true;
     $mail->SMTPSecure = 'tls';
 
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
-    $mail->setFrom('virnich@webscription.de', 'Kontaktformular Schreinerei Virnich');
+    $mail->setFrom('kontakt@schreinerei-virnich.de', 'Kontaktformular Schreinerei Virnich');
     // $mail->setFrom('kontakt@schreinerei-virnich.de', 'Kontaktformular Schreinerei Virnich');
     $mail->addReplyTo('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
+    // $mail->addAddress('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
     $mail->addAddress('schreinerei-virnich@t-online.de', 'Kontaktformular Schreinerei Virnich');
-    $mail->addBCC('virnich@webscription.de', 'Kontaktformular Schreinerei Virnich');
+    $mail->addBCC('kontakt@schreinerei-virnich.de', 'Kontaktformular Schreinerei Virnich');
+    $mail->addBCC('m.stuffer@mauricestuffer.com', 'Kontaktformular Schreinerei Virnich');
     $mail->addBCC($_POST['email'], $_POST['name']);
 
 
